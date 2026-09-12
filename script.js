@@ -3,18 +3,6 @@ const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
-const logo = document.querySelector('[data-logo]');
-const logoFallback = document.querySelector('[data-logo-fallback]');
-
-if (logo) {
-  const showFallback = () => {
-    logo.hidden = true;
-    if (logoFallback) logoFallback.hidden = false;
-  };
-
-  logo.addEventListener('error', showFallback);
-  if (logo.complete && logo.naturalWidth === 0) showFallback();
-}
 
 const closeNav = () => {
   nav?.classList.remove('is-open');

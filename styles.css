@@ -117,23 +117,6 @@ svg { display: block; }
 .brand__logo { width: 62px; height: 62px; object-fit: contain; }
 .brand__logo[hidden] { display: none; }
 
-.brand__fallback {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  color: var(--navy);
-  border: 3px solid var(--navy);
-  border-right-color: var(--green);
-  border-radius: 50%;
-  font-size: 1.05rem;
-  font-weight: 900;
-  letter-spacing: -.06em;
-}
-
-.brand__fallback strong { color: var(--green); }
-.brand__fallback[hidden] { display: none; }
 .brand__text { display: grid; line-height: 1.05; text-transform: uppercase; }
 .brand__text strong { color: var(--navy); font-size: .94rem; letter-spacing: -.015em; }
 .brand__text span { margin-top: 5px; color: var(--green); font-size: .64rem; font-weight: 800; letter-spacing: .18em; }
@@ -381,7 +364,6 @@ svg { display: block; }
 
 .site-footer { padding-top: 75px; color: rgba(255,255,255,.7); background: var(--navy-900); }
 .footer__grid { display: grid; grid-template-columns: 1.6fr .8fr .9fr 1.1fr; gap: 55px; padding-bottom: 60px; }
-.brand--footer .brand__fallback { color: var(--white); border-color: rgba(255,255,255,.7); border-right-color: var(--green); }
 .brand__logo--footer { padding: 3px; background: var(--white); border-radius: 50%; }
 .brand--footer .brand__text strong { color: var(--white); }
 .footer__about p { max-width: 330px; }
@@ -418,7 +400,6 @@ svg { display: block; }
   .primary-nav ul a::after { display: none; }
   .nav-support { width: 100%; margin-top: 22px; }
   .brand__logo { width: 54px; height: 54px; }
-  .brand__fallback { width: 52px; height: 52px; }
   .hero { min-height: auto; }
   .hero__content { grid-template-columns: 1fr 270px; padding-block: 100px 120px; }
   .program-grid { grid-template-columns: repeat(2, 1fr); }
@@ -452,7 +433,6 @@ svg { display: block; }
   .utility-bar { font-size: .68rem; }
   .brand__text strong { font-size: .78rem; }
   .brand__text span { font-size: .55rem; }
-  .brand__fallback { width: 47px; height: 47px; font-size: .9rem; }
   .brand__logo { width: 48px; height: 48px; }
   .hero__content { padding-block: 76px 105px; }
   .hero h1 { font-size: clamp(2.65rem, 14vw, 4rem); }
