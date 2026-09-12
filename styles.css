@@ -382,6 +382,7 @@ svg { display: block; }
 .site-footer { padding-top: 75px; color: rgba(255,255,255,.7); background: var(--navy-900); }
 .footer__grid { display: grid; grid-template-columns: 1.6fr .8fr .9fr 1.1fr; gap: 55px; padding-bottom: 60px; }
 .brand--footer .brand__fallback { color: var(--white); border-color: rgba(255,255,255,.7); border-right-color: var(--green); }
+.brand__logo--footer { padding: 3px; background: var(--white); border-radius: 50%; }
 .brand--footer .brand__text strong { color: var(--white); }
 .footer__about p { max-width: 330px; }
 .site-footer h2 { margin: 8px 0 18px; color: var(--white); font-size: .85rem; text-transform: uppercase; letter-spacing: .13em; }

@@ -12,7 +12,7 @@ Responsive homepage for ImpactReach Foundation, a Liberian humanitarian and deve
 
 ## Logo asset
 
-Place the approved, unmodified IRF logo at `assets/irf-logo.png`. The site automatically displays a small text fallback until the official logo file is added.
+The approved, unmodified IRF logo is stored at `assets/irf-logo.jpg` and is used in the header, footer, and browser icon.
 
 ## Preview
 
