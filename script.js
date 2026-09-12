@@ -60,3 +60,28 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 }
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+const contactForm = document.querySelector('[data-contact-form]');
+const formStatus = document.querySelector('[data-form-status]');
+
+contactForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const reason = String(formData.get('reason') || 'General inquiry');
+  const subject = `IRF website inquiry: ${reason}`;
+  const body = [
+    `Name: ${formData.get('name') || ''}`,
+    `Email: ${formData.get('email') || ''}`,
+    `Organization: ${formData.get('organization') || 'Not provided'}`,
+    `Reason: ${reason}`,
+    '',
+    String(formData.get('message') || '')
+  ].join('\n');
+
+  if (formStatus) {
+    formStatus.textContent = 'Your email application should open with this message prepared. Review it, then press send.';
+  }
+
+  window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
