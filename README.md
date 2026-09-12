@@ -1,13 +1,22 @@
 # ImpactReach Foundation (IRF)
 
-Responsive homepage for ImpactReach Foundation, a Liberian humanitarian and development organization.
+Responsive multi-page website for ImpactReach Foundation, a Liberian humanitarian and development organization.
 
 ## Current scope
 
-- Homepage first-review build
+- Homepage
+- About Us
+- Our Programs
+- Our Impact
+- 100 Children initiative
+- Partners
+- News & Stories
+- Contact
+- Support Us
 - Mobile-first responsive navigation and layout
 - Accessible semantic structure, keyboard navigation, focus states, and reduced-motion support
-- Program, founding story, approach, partnership, support, news, and contact sections
+- Email-based inquiry forms that do not store visitor information
+- Verified-information notices for impact, partnerships, stories, programs, and giving
 - Basic SEO and social-sharing metadata
 
 ## Logo asset

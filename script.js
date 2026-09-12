@@ -1,8 +1,16 @@
+document.documentElement.classList.add('js');
+
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
+
+const updateMobileNavOffset = () => {
+  if (!header) return;
+  const headerBottom = Math.max(0, Math.round(header.getBoundingClientRect().bottom));
+  document.documentElement.style.setProperty('--mobile-nav-top', `${headerBottom}px`);
+};
 
 const closeNav = () => {
   nav?.classList.remove('is-open');
@@ -22,26 +30,38 @@ navToggle?.addEventListener('click', () => {
 navLinks.forEach((link) => link.addEventListener('click', closeNav));
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeNav();
+  if (event.key === 'Escape' && nav?.classList.contains('is-open')) {
+    closeNav();
+    navToggle?.focus();
+  }
 });
 
-const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 20);
+const updateHeader = () => {
+  header?.classList.toggle('is-scrolled', window.scrollY > 20);
+  updateMobileNavOffset();
+};
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('resize', () => {
+  updateMobileNavOffset();
+  if (window.innerWidth > 1120) closeNav();
+}, { passive: true });
 
-const activeSectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => {
-      const isMatch = link.getAttribute('href') === `#${entry.target.id}`;
-      link.classList.toggle('is-active', isMatch);
-      if (isMatch) link.setAttribute('aria-current', 'page');
-      else link.removeAttribute('aria-current');
+if ('IntersectionObserver' in window) {
+  const activeSectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => {
+        const isMatch = link.getAttribute('href') === `#${entry.target.id}`;
+        link.classList.toggle('is-active', isMatch);
+        if (isMatch) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
     });
-  });
-}, { rootMargin: '-35% 0px -55%', threshold: 0 });
+  }, { rootMargin: '-35% 0px -55%', threshold: 0 });
 
-sections.forEach((section) => activeSectionObserver.observe(section));
+  sections.forEach((section) => activeSectionObserver.observe(section));
+}
 
 const revealItems = document.querySelectorAll('[data-reveal]');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -59,7 +79,7 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+document.querySelector('[data-year]')?.replaceChildren(String(new Date().getFullYear()));
 
 const contactForm = document.querySelector('[data-contact-form]');
 const formStatus = document.querySelector('[data-form-status]');
