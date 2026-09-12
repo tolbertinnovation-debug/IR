@@ -85,3 +85,30 @@ contactForm?.addEventListener('submit', (event) => {
 
   window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
+const supportForm = document.querySelector('[data-support-form]');
+const supportStatus = document.querySelector('[data-support-status]');
+
+supportForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(supportForm);
+  const supportType = String(formData.get('support-type') || 'Support inquiry');
+  const program = String(formData.get('program') || 'No specific program');
+  const subject = `IRF support interest: ${supportType}`;
+  const body = [
+    `Name: ${formData.get('name') || ''}`,
+    `Email: ${formData.get('email') || ''}`,
+    `Organization: ${formData.get('organization') || 'Not provided'}`,
+    `Support interest: ${supportType}`,
+    `Program interest: ${program}`,
+    '',
+    String(formData.get('message') || '')
+  ].join('\n');
+
+  if (supportStatus) {
+    supportStatus.textContent = 'Your email application should open with this message prepared. Review it, then press send.';
+  }
+
+  window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
