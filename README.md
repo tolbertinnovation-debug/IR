@@ -14,6 +14,7 @@ Responsive multi-page website for ImpactReach Foundation, a Liberian humanitaria
 - News & Stories
 - Contact
 - Support Us
+- Frequently Asked Questions
 - Photo credits and licensing
 - Mobile-first responsive navigation and layout
 - Accessible semantic structure, keyboard navigation, focus states, and reduced-motion support
