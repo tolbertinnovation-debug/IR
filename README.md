@@ -7,6 +7,7 @@ Responsive multi-page website for ImpactReach Foundation, a Liberian humanitaria
 - Homepage
 - About Us
 - Founder & CEO profile
+- Leadership team
 - Our Programs
 - Our Impact
 - 100 Children initiative
