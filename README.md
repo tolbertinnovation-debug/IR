@@ -30,7 +30,9 @@ The approved, unmodified IRF logo is stored at `assets/irf-logo.jpg` and is used
 
 ## Photography
 
-All website photography is sourced from images explicitly documented as being photographed in Liberia or depicting Liberian communities. Full source and licensing details are published on `credits.html`.
+The founder portrait at `assets/michael-whea-mardeh.jpg` is supplied by the Foundation. All other website
+photography is sourced from images explicitly documented as being photographed in Liberia or depicting
+Liberian communities. Full source and licensing details are published on `credits.html`.
 
 ## Preview
 

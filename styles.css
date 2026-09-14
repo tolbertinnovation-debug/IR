@@ -1012,8 +1012,11 @@ svg { display: block; }
 .founder-profile-hero__visual { min-height: 430px; position: relative; display: grid; place-items: center; }
 .founder-profile-hero__portrait { width: min(100%, 390px); aspect-ratio: 1; position: relative; display: grid; place-items: center; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 50%; box-shadow: 0 35px 80px rgba(5,12,42,.32); backdrop-filter: blur(8px); }
 .founder-profile-hero__portrait::before { content: ""; position: absolute; inset: 25px; border: 2px solid rgba(255,255,255,.14); border-radius: inherit; }
+.founder-profile-hero__portrait--photo { overflow: hidden; background: var(--white); border-color: rgba(255,255,255,.28); }
+.founder-profile-hero__portrait--photo::before { content: none; }
+.founder-profile-hero__portrait--photo img { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: inherit; }
 .founder-profile-hero__monogram { position: relative; z-index: 1; font-size: clamp(4.8rem, 9vw, 7.2rem); font-weight: 950; letter-spacing: -.1em; }
-.founder-profile-hero__badge { position: absolute; right: 0; bottom: 42px; z-index: 2; max-width: 210px; padding: 18px 22px; color: var(--navy); background: var(--orange); border: 7px solid var(--navy); border-radius: 18px; box-shadow: var(--shadow-lg); }
+.founder-profile-hero__badge { position: absolute; right: -12px; bottom: 6px; z-index: 2; max-width: 210px; padding: 18px 22px; color: var(--navy); background: var(--orange); border: 7px solid var(--navy); border-radius: 18px; box-shadow: var(--shadow-lg); }
 .founder-profile-hero__badge small { display: block; font-size: .64rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
 .founder-profile-hero__badge strong { display: block; margin-top: 2px; font-size: 1rem; }
 
@@ -1036,6 +1039,8 @@ svg { display: block; }
 .profile-experience__icon svg { width: 34px; fill: currentColor; }
 .profile-experience__card h3 { margin: auto 0 9px; color: var(--navy); font-size: 1.2rem; line-height: 1.25; }
 .profile-experience__card p { margin: 0; color: var(--muted); font-size: .84rem; }
+.profile-experience__note { display: grid; gap: 16px; margin-top: 18px; padding: clamp(24px, 4vw, 34px); background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--green); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.profile-experience__note p { margin: 0; color: var(--muted); }
 
 .profile-education { position: relative; overflow: hidden; color: var(--white); background: var(--navy); }
 .profile-education::after { content: ""; position: absolute; width: 390px; height: 390px; right: -170px; bottom: -250px; border: 58px solid rgba(46,158,63,.35); border-left-color: rgba(245,166,35,.35); border-radius: 50%; }
@@ -1088,12 +1093,17 @@ svg { display: block; }
 .profile-legacy__vision { padding: 32px; color: var(--white); background: var(--navy); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
 .profile-legacy__vision h3 { margin: 0 0 16px; font-size: 1.45rem; }
 .profile-legacy__vision p { margin: 0; color: rgba(255,255,255,.75); }
+.profile-legacy__grid .profile-legacy__intro { margin-bottom: 14px; color: var(--navy); font-weight: 750; }
+.profile-legacy__commitments { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.profile-legacy__commitments li { position: relative; padding-left: 30px; color: var(--muted); font-size: .92rem; }
+.profile-legacy__commitments li::before { content: ""; position: absolute; left: 0; top: .45em; width: 14px; height: 14px; background: var(--orange); border-radius: 50%; box-shadow: inset 0 0 0 4px var(--cream); }
 
 .profile-quote { position: relative; overflow: hidden; padding-block: clamp(90px, 11vw, 140px); color: var(--white); background: linear-gradient(135deg, var(--navy-900), var(--navy)); }
 .profile-quote::after { content: "“"; position: absolute; right: 5vw; top: -70px; color: rgba(255,255,255,.06); font-size: 26rem; font-family: Georgia, serif; line-height: 1; }
 .profile-quote__inner { position: relative; z-index: 1; max-width: 980px; }
 .profile-quote blockquote { margin: 0; font-size: clamp(2rem, 4.4vw, 3.8rem); font-weight: 800; line-height: 1.2; letter-spacing: -.04em; }
 .profile-quote cite { display: block; margin-top: 28px; color: var(--orange); font-size: .78rem; font-style: normal; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
+.profile-quote__closing { max-width: 800px; margin: 30px 0 0; color: rgba(255,255,255,.78); font-size: 1.02rem; line-height: 1.65; }
 .profile-quote__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .about__links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
 
@@ -1127,6 +1137,8 @@ svg { display: block; }
 .leadership-card--evaluation .leadership-card__identity { background: var(--green-700); }
 .leadership-card--evaluation .leadership-card__identity::after { border-color: rgba(27,42,99,.38); border-left-color: rgba(245,166,35,.55); }
 .leadership-card__monogram { width: 220px; height: 220px; display: grid; place-items: center; position: relative; z-index: 1; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.19); border-radius: 50%; font-size: 4.5rem; font-weight: 950; letter-spacing: -.1em; }
+.leadership-card__portrait { width: 220px; height: 220px; position: relative; z-index: 1; overflow: hidden; background: var(--white); border: 2px solid rgba(255,255,255,.19); border-radius: 50%; }
+.leadership-card__portrait img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .leadership-card__label { position: absolute; left: 24px; bottom: 24px; z-index: 2; padding: 8px 12px; color: var(--navy); background: var(--orange); border-radius: 999px; font-size: .65rem; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
 .leadership-card__copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(34px, 6vw, 62px); }
 .leadership-card__eyebrow { margin: 0 0 11px !important; color: var(--orange-text) !important; font-size: .68rem !important; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
@@ -1403,6 +1415,7 @@ svg { display: block; }
   .leadership-hero__person--two { width: 165px; height: 165px; }
   .leadership-card__identity { min-height: 330px; }
   .leadership-card__monogram { width: 190px; height: 190px; font-size: 3.8rem; }
+  .leadership-card__portrait { width: 190px; height: 190px; }
   .leadership-card__copy { padding: 30px 23px; }
   .leadership-belief__inner { grid-template-columns: 1fr; gap: 5px; }
   .leadership-belief__mark { font-size: 8rem; }
