@@ -57,9 +57,11 @@ body { overflow-x: hidden; }
 }
 .breadcrumbs { padding: 7px 12px; width: fit-content; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.08); backdrop-filter: blur(10px); }
 
-/* Unified section rhythm */
+/* Unified section rhythm.
+   No blanket background here: striping by nth-of-type outranks the single-class
+   rules that give sections their real colour, so dark sections were repainted
+   white while their text stayed white and became unreadable. */
 .inner-page .section { position: relative; }
-.inner-page .section:nth-of-type(even) { background: linear-gradient(180deg, #fff 0%, #fbfcfa 100%); }
 .section-heading > p:last-child { max-width: 760px; margin-inline: auto; }
 
 /* Stronger cards */
