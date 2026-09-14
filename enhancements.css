@@ -59,7 +59,9 @@ body { overflow-x: hidden; }
 
 /* Unified section rhythm */
 .inner-page .section { position: relative; }
-.inner-page .section:nth-of-type(even) { background: linear-gradient(180deg, #fff 0%, #fbfcfa 100%); }
+/* Zero specificity via :where(), so any section that declares its own
+   background (navy, green, cream) keeps it instead of being painted over. */
+:where(.inner-page .section:nth-of-type(even)) { background: linear-gradient(180deg, #fff 0%, #fbfcfa 100%); }
 .section-heading > p:last-child { max-width: 760px; margin-inline: auto; }
 
 /* Stronger cards */
