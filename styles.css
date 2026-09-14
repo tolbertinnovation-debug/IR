@@ -1514,3 +1514,25 @@ svg { display: block; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+.founder__portrait,
+.leadership-card__portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founder__portrait {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 24px 60px rgba(15, 31, 72, 0.22);
+}
+
+.leadership-card__portrait {
+  border-radius: 24px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 44px rgba(15, 31, 72, 0.2);
+}
