@@ -1,5 +1,14 @@
 document.documentElement.classList.add('js');
 
+// Load the site-wide polish layer on every page without duplicating <link> tags.
+if (!document.querySelector('link[data-irf-enhancements]')) {
+  const enhancementStyles = document.createElement('link');
+  enhancementStyles.rel = 'stylesheet';
+  enhancementStyles.href = 'enhancements.css?v=20260914-1';
+  enhancementStyles.dataset.irfEnhancements = 'true';
+  document.head.appendChild(enhancementStyles);
+}
+
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
@@ -80,6 +89,45 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 }
 
 document.querySelector('[data-year]')?.replaceChildren(String(new Date().getFullYear()));
+
+// Thin branded progress indicator helps long content pages feel easier to navigate.
+const progress = document.createElement('div');
+progress.className = 'site-progress';
+progress.setAttribute('aria-hidden', 'true');
+document.body.appendChild(progress);
+
+const updateProgress = () => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const percentage = maxScroll > 0 ? Math.min(100, Math.max(0, (window.scrollY / maxScroll) * 100)) : 0;
+  progress.style.width = `${percentage}%`;
+};
+updateProgress();
+window.addEventListener('scroll', updateProgress, { passive: true });
+window.addEventListener('resize', updateProgress, { passive: true });
+
+// Persistent, accessible actions across the whole website.
+const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+const floatingActions = document.createElement('div');
+floatingActions.className = 'irf-floating-actions';
+floatingActions.setAttribute('aria-label', 'Quick actions');
+
+if (currentPage !== 'donate.html') {
+  const donateLink = document.createElement('a');
+  donateLink.className = 'irf-float-donate';
+  donateLink.href = 'donate.html';
+  donateLink.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21S3 15.5 3 8.8A5.3 5.3 0 0 1 12 5a5.3 5.3 0 0 1 9 3.8C21 15.5 12 21 12 21Z"/></svg><span>Donate</span>';
+  floatingActions.appendChild(donateLink);
+}
+
+if (currentPage !== 'contact.html') {
+  const contactLink = document.createElement('a');
+  contactLink.className = 'irf-float-contact';
+  contactLink.href = 'contact.html';
+  contactLink.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm9 7 7-4.4V7H5v.6l7 4.4Zm0 2.3L5 10v7h14v-7l-7 4.3Z"/></svg><span>Contact</span>';
+  floatingActions.appendChild(contactLink);
+}
+
+if (floatingActions.children.length) document.body.appendChild(floatingActions);
 
 const contactForm = document.querySelector('[data-contact-form]');
 const formStatus = document.querySelector('[data-form-status]');
