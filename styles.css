@@ -74,7 +74,9 @@ main > section {
 .profile-overview__grid,
 .profile-education__grid,
 .profile-faith__grid,
-.profile-legacy__grid {
+.profile-legacy__grid,
+.faq-directory__layout,
+.faq-group__heading {
   min-width: 0;
 }
 
@@ -82,7 +84,9 @@ main > section {
 .profile-overview__grid > *,
 .profile-education__grid > *,
 .profile-faith__grid > *,
-.profile-legacy__grid > * {
+.profile-legacy__grid > *,
+.faq-directory__layout > *,
+.faq-group__heading > * {
   min-width: 0;
 }
 
@@ -1246,7 +1250,7 @@ main > section {
 .faq-group__heading > span { width: 58px; height: 58px; display: grid; place-items: center; color: var(--white); background: var(--navy); border-radius: 17px; font-size: .78rem; font-weight: 900; }
 .faq-group:nth-child(even) .faq-group__heading > span { background: var(--green-700); }
 .faq-group__heading small { color: var(--orange-text); font-size: .67rem; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
-.faq-group__heading h2 { margin: 2px 0 0; color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.15; letter-spacing: -.035em; }
+.faq-group__heading h2 { margin: 2px 0 0; overflow-wrap: break-word; color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.15; letter-spacing: -.035em; }
 .faq-group__items { display: grid; gap: 11px; }
 .faq-group details { background: #f8f9fb; border: 1px solid var(--line); border-radius: 16px; transition: border-color .2s ease, box-shadow .2s ease; }
 .faq-group details[open] { background: var(--white); border-color: rgba(46,158,63,.45); box-shadow: var(--shadow-sm); }
@@ -1467,11 +1471,12 @@ main > section {
     padding: 26px 28px 40px;
     overflow-y: auto;
     background: var(--white);
-    transform: translateX(100%);
+    opacity: 0;
+    transform: translateY(-14px);
     visibility: hidden;
-    transition: transform .28s ease, visibility .28s;
+    transition: opacity .28s ease, transform .28s ease, visibility .28s;
   }
-  .primary-nav.is-open { transform: translateX(0); visibility: visible; }
+  .primary-nav.is-open { opacity: 1; transform: translateY(0); visibility: visible; }
   .primary-nav ul { display: grid; gap: 0; }
   .primary-nav li:nth-child(6), .primary-nav li:nth-child(7) { display: block; }
   .primary-nav ul a { display: block; padding: 15px 4px; border-bottom: 1px solid var(--line); font-size: .86rem; }
