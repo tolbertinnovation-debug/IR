@@ -34,6 +34,12 @@ The founder portrait at `assets/michael-whea-mardeh.jpg` is supplied by the Foun
 photography is sourced from images explicitly documented as being photographed in Liberia or depicting
 Liberian communities. Full source and licensing details are published on `credits.html`.
 
+## Structure
+
+All styling lives in a single `styles.css`. `script.js` handles navigation, scroll
+reveals and the mailto-based forms only — it no longer injects stylesheets or
+markup, so pages render in one pass.
+
 ## Preview
 
 Open `index.html` in a browser or serve the folder with any static web server.
