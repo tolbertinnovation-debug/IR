@@ -1166,6 +1166,8 @@ main > section {
 .leadership-card__identity::after { content: ""; position: absolute; width: 270px; height: 270px; right: -145px; bottom: -155px; border: 42px solid rgba(46,158,63,.55); border-left-color: rgba(245,166,35,.42); border-radius: 50%; }
 .leadership-card--evaluation .leadership-card__identity { background: var(--green-700); }
 .leadership-card--evaluation .leadership-card__identity::after { border-color: rgba(27,42,99,.38); border-left-color: rgba(245,166,35,.55); }
+.leadership-card--affairs .leadership-card__identity { background: var(--navy-900); }
+.leadership-card--affairs .leadership-card__identity::after { border-color: rgba(58,174,216,.42); border-left-color: rgba(46,158,63,.5); }
 .leadership-card__monogram { width: 220px; height: 220px; display: grid; place-items: center; position: relative; z-index: 1; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.19); border-radius: 50%; font-size: 4.5rem; font-weight: 950; letter-spacing: -.1em; }
 .leadership-card__label { position: absolute; left: 24px; bottom: 24px; z-index: 2; padding: 8px 12px; color: var(--navy); background: var(--orange); border-radius: 999px; font-size: .65rem; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
 .leadership-card__copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(34px, 6vw, 62px); }
