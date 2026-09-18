@@ -1597,3 +1597,50 @@ main > section {
 .error-links__grid span, .explore-links__grid span { color: var(--muted); font-size: .86rem; }
 @media (max-width: 900px) { .error-links__grid, .explore-links__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 680px) { .error-links__grid, .explore-links__grid { grid-template-columns: 1fr; } .error-hero__actions, .error-hero__actions .button { width: 100%; } }
+
+/* Organization profile */
+.page-hero--profile .page-hero__image { background-image: url("assets/irf-family.jpg"); background-position: center 8%; }
+.profile-doc__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.profile-doc__actions--center { justify-content: center; margin-top: 38px; }
+.profile-doc__grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(45px, 7vw, 100px); align-items: start; }
+.profile-doc__grid h2 { margin: 0; }
+.profile-doc__grid p { color: var(--muted); }
+.profile-doc__grid .lead { color: var(--ink); font-size: 1.08rem; }
+.profile-doc--vm { background: var(--cream); }
+.profile-doc__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.profile-doc__pair article { padding: clamp(28px, 4vw, 44px); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.profile-doc__pair h3 { margin: 0 0 12px; color: var(--navy); font-size: 1.35rem; }
+.profile-doc__pair p { margin: 0; color: var(--muted); }
+.profile-doc__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.profile-doc__cards article { padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.profile-doc__cards h3 { margin: 0 0 9px; color: var(--navy); font-size: 1.08rem; line-height: 1.25; }
+.profile-doc__cards p { margin: 0; color: var(--muted); font-size: .88rem; }
+.profile-doc--focus { background: var(--cream); }
+.profile-doc__table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow-sm); }
+.profile-doc__table table { width: 100%; min-width: 560px; border-collapse: collapse; }
+.profile-doc__table th, .profile-doc__table td { padding: 18px 22px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.profile-doc__table thead th { color: var(--white); background: var(--navy); font-size: .7rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.profile-doc__table tbody th { width: 34%; color: var(--navy); font-size: .95rem; }
+.profile-doc__table tbody td { color: var(--muted); font-size: .92rem; }
+.profile-doc__table tbody tr:last-child th, .profile-doc__table tbody tr:last-child td { border-bottom: 0; }
+.profile-doc--initiative { color: var(--white); background: var(--navy); }
+.profile-doc__initiative { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
+.profile-doc__initiative h2 { margin: 0 0 18px; color: var(--white); }
+.profile-doc__initiative p { color: rgba(255,255,255,.78); }
+.profile-doc__figures { display: grid; gap: 12px; margin: 0; }
+.profile-doc__figures > div { padding: 18px 22px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 16px; }
+.profile-doc__figures dt { color: rgba(255,255,255,.7); font-size: .68rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.profile-doc__figures dd { margin: 6px 0 0; color: var(--white); font-size: 1.15rem; font-weight: 850; }
+.profile-doc__statement { margin-top: 24px; padding: 22px 26px; color: var(--navy) !important; background: var(--cream); border-left: 4px solid var(--green); border-radius: 0 16px 16px 0; font-weight: 750; }
+.profile-doc--partnership { background: var(--cream); }
+.profile-doc--contact { background: var(--cream); }
+.profile-doc--contact a { color: var(--green-700); font-weight: 800; }
+
+@media (max-width: 900px) {
+  .profile-doc__grid, .profile-doc__pair, .profile-doc__initiative { grid-template-columns: 1fr; }
+  .profile-doc__cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .profile-doc__cards { grid-template-columns: 1fr; }
+  .profile-doc__actions, .profile-doc__actions .button { width: 100%; }
+}
