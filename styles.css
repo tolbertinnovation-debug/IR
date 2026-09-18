@@ -211,9 +211,11 @@ main > section {
 .hero__image {
   position: absolute;
   inset: 0;
-  background-image: url("assets/irf-family.jpg");
+  /* the schoolchildren frame is landscape, so it fills a wide banner without
+     zooming into a single face the way the portrait crop did */
+  background-image: url("assets/irf-students.jpg");
   background-size: cover;
-  background-position: center 8%;
+  background-position: center;
   transform: scale(1.015);
 }
 
