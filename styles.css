@@ -1144,10 +1144,10 @@ main > section {
 .leadership-hero__content h1 { margin: 22px 0; color: var(--white); font-size: clamp(3.5rem, 6.2vw, 5.8rem); line-height: .98; letter-spacing: -.06em; }
 .leadership-hero__content h1 em { color: var(--orange); font-style: normal; }
 .leadership-hero__content > p:last-child { max-width: 670px; margin: 0; color: rgba(255,255,255,.74); font-size: 1.08rem; }
-.leadership-hero__visual { min-height: 390px; position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2.4vw, 26px); justify-items: center; align-items: center; }
-.leadership-hero__person { position: relative; z-index: 2; width: 100%; max-width: 196px; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; color: var(--white); background: rgba(255,255,255,.1); border: 3px solid rgba(255,255,255,.26); border-radius: 50%; box-shadow: 0 32px 75px rgba(5,12,42,.35); }
-.leadership-hero__person--one, .leadership-hero__person--four { transform: translateY(-12px); }
-.leadership-hero__person--two, .leadership-hero__person--three { transform: translateY(12px); }
+.leadership-hero__visual { min-height: 390px; position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; align-items: center; gap: clamp(12px, 2vw, 22px); }
+.leadership-hero__person { position: relative; z-index: 2; flex: 0 0 auto; width: clamp(112px, 15vw, 172px); aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; color: var(--white); background: rgba(255,255,255,.1); border: 3px solid rgba(255,255,255,.26); border-radius: 50%; box-shadow: 0 32px 75px rgba(5,12,42,.35); }
+.leadership-hero__person--one, .leadership-hero__person--three, .leadership-hero__person--five { transform: translateY(-12px); }
+.leadership-hero__person--two, .leadership-hero__person--four { transform: translateY(12px); }
 .leadership-hero__person strong { font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1; letter-spacing: -.09em; }
 .leadership-hero__person span { position: relative; z-index: 1; width: 100%; margin-top: auto; padding: 34px 10px 16px; color: var(--white); background: linear-gradient(rgba(5,12,42,0), rgba(5,12,42,.82)); text-align: center; font-size: .66rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
 .leadership-hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; }
@@ -1170,6 +1170,9 @@ main > section {
 .leadership-card--affairs .leadership-card__identity::after { border-color: rgba(58,174,216,.42); border-left-color: rgba(46,158,63,.5); }
 .leadership-card--finance .leadership-card__identity { background: var(--green); }
 .leadership-card--finance .leadership-card__identity::after { border-color: rgba(17,28,73,.42); border-left-color: rgba(245,166,35,.55); }
+.leadership-card--operations .leadership-card__identity { background: var(--orange-700); }
+.leadership-card--operations .leadership-card__identity::after { border-color: rgba(17,28,73,.4); border-left-color: rgba(46,158,63,.5); }
+.leadership-card--operations .leadership-card__label { color: var(--white); background: var(--navy); }
 .leadership-card__monogram { width: 220px; height: 220px; display: grid; place-items: center; position: relative; z-index: 1; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.19); border-radius: 50%; font-size: 4.5rem; font-weight: 950; letter-spacing: -.1em; }
 .leadership-card__label { position: absolute; left: 24px; bottom: 24px; z-index: 2; padding: 8px 12px; color: var(--navy); background: var(--orange); border-radius: 999px; font-size: .65rem; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
 .leadership-card__copy { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(34px, 6vw, 62px); }
@@ -1443,7 +1446,7 @@ main > section {
   .leadership-hero__grid { padding-block: 72px 90px; }
   .leadership-hero__content h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
   .leadership-hero__visual { min-height: 330px; gap: 12px; }
-  .leadership-hero__person { max-width: 150px; }
+  .leadership-hero__person { width: clamp(108px, 30vw, 150px); }
   /* the label sits where a smaller circle has already narrowed, so ease it up and in */
   .leadership-hero__person span { padding: 20px 6px 24px; font-size: .52rem; letter-spacing: .06em; }
   .leadership-card__identity { min-height: 330px; }
