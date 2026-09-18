@@ -4,7 +4,7 @@ document.documentElement.classList.add('js');
 if (!document.querySelector('link[data-irf-enhancements]')) {
   const enhancementStyles = document.createElement('link');
   enhancementStyles.rel = 'stylesheet';
-  enhancementStyles.href = 'enhancements.css?v=20260914-2';
+  enhancementStyles.href = 'enhancements.css?v=20260918-1';
   enhancementStyles.dataset.irfEnhancements = 'true';
   document.head.appendChild(enhancementStyles);
 }
@@ -128,6 +128,29 @@ if (currentPage !== 'contact.html') {
 }
 
 if (floatingActions.children.length) document.body.appendChild(floatingActions);
+
+// The quick actions are fixed, so they sit over whatever is scrolled beneath them.
+// Stand them down where they are redundant: over the hero (the header carries the
+// same links) and over the footer (which lists them too), leaving the body copy clear.
+if (floatingActions.children.length && 'IntersectionObserver' in window) {
+  const yieldTo = [
+    document.querySelector('main > section'),
+    document.querySelector('.site-footer'),
+  ].filter(Boolean);
+
+  if (yieldTo.length) {
+    const onScreen = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) onScreen.add(entry.target);
+        else onScreen.delete(entry.target);
+      });
+      floatingActions.classList.toggle('is-stood-down', onScreen.size > 0);
+    }, { threshold: 0.12 });
+
+    yieldTo.forEach((section) => observer.observe(section));
+  }
+}
 
 const contactForm = document.querySelector('[data-contact-form]');
 const formStatus = document.querySelector('[data-form-status]');

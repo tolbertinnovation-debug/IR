@@ -187,6 +187,8 @@ form textarea:focus {
 .irf-floating-actions .irf-float-donate { background: var(--orange); color: var(--navy-900); }
 .irf-floating-actions .irf-float-contact { background: var(--navy); }
 .irf-floating-actions svg { width: 18px; height: 18px; fill: currentColor; }
+.irf-floating-actions { transition: opacity .25s ease, transform .25s ease, visibility .25s; }
+.irf-floating-actions.is-stood-down { opacity: 0; visibility: hidden; transform: translateY(8px); pointer-events: none; }
 
 /* On-page trust note */
 .irf-trust-note {
