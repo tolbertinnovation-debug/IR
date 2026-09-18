@@ -211,9 +211,9 @@ main > section {
 .hero__image {
   position: absolute;
   inset: 0;
-  background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gwealey_community_%2825104242156%29.jpg/1280px-Gwealey_community_%2825104242156%29.jpg");
+  background-image: url("assets/irf-family.jpg");
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 8%;
   transform: scale(1.015);
 }
 
@@ -295,7 +295,7 @@ main > section {
 .about { overflow: hidden; background: var(--white); }
 .about__grid { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: clamp(50px, 8vw, 110px); }
 .about__visual { min-height: 600px; position: relative; }
-.about__image { position: absolute; inset: 0 30px 40px 0; background: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Farm_Workers.jpg/1280px-Farm_Workers.jpg") center/cover no-repeat; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.about__image { position: absolute; inset: 0 30px 40px 0; background: url("assets/irf-family.jpg") center/cover no-repeat; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background-position: center 12%; }
 .about__image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(17,28,73,.35), transparent 45%); border-radius: inherit; }
 .about__badge { position: absolute; right: 0; bottom: 0; width: 190px; height: 150px; display: grid; place-content: center; padding: 20px; color: var(--white); background: var(--navy); border: 8px solid var(--white); border-radius: 26px; box-shadow: var(--shadow-sm); }
 .about__badge::before { content: ""; position: absolute; top: 14px; left: 14px; width: 10px; height: 10px; background: var(--orange); border-radius: 50%; }
@@ -431,7 +431,7 @@ main > section {
 }
 
 .page-hero__image { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.page-hero--about .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Charlie_Too_Town_Community%2C_Bong_County_%2825130602435%29.jpg/1280px-Charlie_Too_Town_Community%2C_Bong_County_%2825130602435%29.jpg"); }
+.page-hero--about .page-hero__image { background-image: url("assets/irf-family.jpg"); background-position: center 8%; }
 .page-hero__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,20,57,.97) 0%, rgba(16,33,79,.85) 52%, rgba(17,40,72,.42) 100%); }
 .page-hero__rings { position: absolute; width: 520px; height: 520px; right: -170px; bottom: -350px; border: 62px solid rgba(46,158,63,.46); border-left-color: rgba(245,166,35,.4); border-radius: 50%; }
 .page-hero__content { position: relative; z-index: 1; padding-block: 100px; }
@@ -505,7 +505,7 @@ main > section {
 .about-actions { flex: 0 0 auto; display: flex; gap: 12px; }
 
 /* Programs page */
-.page-hero--programs .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Liberian_students.jpg/1280px-Liberian_students.jpg"); background-position: center 48%; }
+.page-hero--programs .page-hero__image { background-image: url("assets/irf-skills.jpg"); background-position: center 10%; }
 .program-jump { position: sticky; top: var(--header-height); z-index: 900; color: var(--white); background: var(--green-700); box-shadow: 0 10px 30px rgba(17,28,73,.12); }
 .program-jump__inner { min-height: 72px; display: flex; align-items: center; gap: 10px; overflow-x: auto; scrollbar-width: none; }
 .program-jump__inner::-webkit-scrollbar { display: none; }
@@ -573,7 +573,7 @@ main > section {
 .program-contact .button { flex: 0 0 auto; }
 
 /* Impact page */
-.page-hero--impact .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Harvester_Showing_Plantain.jpg/1280px-Harvester_Showing_Plantain.jpg"); background-position: center 48%; }
+.page-hero--impact .page-hero__image { background-image: url("assets/irf-skills.jpg"); background-position: center 10%; }
 .impact-status { color: var(--white); background: var(--green-700); }
 .impact-status__inner { min-height: 110px; display: flex; align-items: center; gap: 20px; }
 .impact-status__icon { flex: 0 0 auto; width: 50px; height: 50px; display: grid; place-items: center; color: var(--green); background: var(--white); border-radius: 50%; }
@@ -652,7 +652,7 @@ main > section {
 
 /* 100 Children page */
 .page-hero--children { min-height: 650px; }
-.page-hero--children .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Children_play_football_at_University_of_Liberia_basketball_court.jpg/1280px-Children_play_football_at_University_of_Liberia_basketball_court.jpg"); background-position: center 43%; }
+.page-hero--children .page-hero__image { background-image: url("assets/irf-students.jpg"); background-position: center 50%; }
 .page-hero--children .page-hero__overlay { background: linear-gradient(90deg, rgba(10,20,57,.97) 0%, rgba(18,43,89,.82) 52%, rgba(15,39,72,.35) 100%); }
 .children-hero__number { position: absolute; z-index: 1; right: 4vw; bottom: -45px; color: transparent; font-size: clamp(13rem, 28vw, 27rem); font-weight: 950; letter-spacing: -.1em; line-height: .8; -webkit-text-stroke: 2px rgba(255,255,255,.18); }
 .page-hero--children .page-hero__content { z-index: 2; }
@@ -731,7 +731,7 @@ main > section {
 
 /* Partners page */
 .page-hero--partners { min-height: 620px; }
-.page-hero--partners .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Gwealey_community_%2825104242156%29.jpg/1280px-Gwealey_community_%2825104242156%29.jpg"); background-position: center 44%; }
+.page-hero--partners .page-hero__image { background-image: url("assets/irf-family.jpg"); background-position: center 8%; }
 .partner-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .partner-note { color: var(--white); background: var(--green-700); }
 .partner-note__inner { min-height: 100px; display: flex; align-items: center; gap: 20px; }
@@ -812,7 +812,7 @@ main > section {
 /* News & Stories page */
 .story-placeholder__link { margin-top: 18px; }
 .page-hero--stories { min-height: 590px; }
-.page-hero--stories .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Liberia_-_Pottery_making.jpg/1280px-Liberia_-_Pottery_making.jpg"); background-position: center 43%; }
+.page-hero--stories .page-hero__image { background-image: url("assets/irf-students.jpg"); background-position: center 50%; }
 .newsroom-note { color: var(--white); background: var(--green-700); }
 .newsroom-note__inner { min-height: 105px; display: flex; align-items: center; gap: 20px; }
 .newsroom-note__inner > span { flex: 0 0 auto; width: 48px; height: 48px; display: grid; place-items: center; color: var(--green); background: var(--white); border-radius: 50%; }
@@ -897,7 +897,7 @@ main > section {
 
 /* Contact page */
 .page-hero--contact { min-height: 590px; }
-.page-hero--contact .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Liberia_-_Muddy_market.jpg/1280px-Liberia_-_Muddy_market.jpg"); background-position: center 45%; }
+.page-hero--contact .page-hero__image { background-image: url("assets/irf-students.jpg"); background-position: center 50%; }
 
 .contact-options { padding-block: clamp(85px, 10vw, 130px); background: var(--cream); }
 .contact-options__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 45px; }
@@ -964,7 +964,7 @@ main > section {
 
 /* Support page */
 .page-hero--support { min-height: 650px; }
-.page-hero--support .page-hero__image { background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Charlie_Too_Town_Community%2C_Bong_County_%2825130602435%29.jpg/1280px-Charlie_Too_Town_Community%2C_Bong_County_%2825130602435%29.jpg"); background-position: center 40%; }
+.page-hero--support .page-hero__image { background-image: url("assets/irf-family.jpg"); background-position: center 8%; }
 .support-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
 .giving-notice { color: var(--white); background: var(--green-700); }
