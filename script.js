@@ -106,23 +106,26 @@ window.addEventListener('scroll', updateProgress, { passive: true });
 window.addEventListener('resize', updateProgress, { passive: true });
 
 // Persistent, accessible actions across the whole website.
-const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+const pathParts = window.location.pathname.toLowerCase().split('/').filter(Boolean);
+const currentPage = pathParts.at(-1) === 'index.html' ? (pathParts.at(-2) || 'home') : (pathParts.at(-1) || 'home');
+// Resolve quick actions from this script's location so they work on every page depth.
+const siteRoot = new URL('.', document.currentScript.src);
 const floatingActions = document.createElement('div');
 floatingActions.className = 'irf-floating-actions';
 floatingActions.setAttribute('aria-label', 'Quick actions');
 
-if (currentPage !== 'donate.html') {
+if (currentPage !== 'donate') {
   const donateLink = document.createElement('a');
   donateLink.className = 'irf-float-donate';
-  donateLink.href = 'donate.html';
+  donateLink.href = new URL('donate/', siteRoot).href;
   donateLink.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21S3 15.5 3 8.8A5.3 5.3 0 0 1 12 5a5.3 5.3 0 0 1 9 3.8C21 15.5 12 21 12 21Z"/></svg><span>Donate</span>';
   floatingActions.appendChild(donateLink);
 }
 
-if (currentPage !== 'contact.html') {
+if (currentPage !== 'contact') {
   const contactLink = document.createElement('a');
   contactLink.className = 'irf-float-contact';
-  contactLink.href = 'contact.html';
+  contactLink.href = new URL('contact/', siteRoot).href;
   contactLink.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm9 7 7-4.4V7H5v.6l7 4.4Zm0 2.3L5 10v7h14v-7l-7 4.3Z"/></svg><span>Contact</span>';
   floatingActions.appendChild(contactLink);
 }
