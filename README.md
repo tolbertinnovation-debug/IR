@@ -34,4 +34,4 @@ All website photography is sourced from images explicitly documented as being ph
 
 ## Preview
 
-Open `index.html` in a browser or serve the folder with any static web server.
+Serve the folder with any static web server. Pages use directory URLs such as `/programs/`; older `.html` links redirect to them.
