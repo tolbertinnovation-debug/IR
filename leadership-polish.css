@@ -1,0 +1,63 @@
+.leadership-card--consultant .leadership-card__identity { background: var(--navy-900); }
+.leadership-card--consultant .leadership-card__identity::after { border-color: rgba(58,174,216,.42); border-left-color: rgba(46,158,63,.5); }
+
+/* Leadership profiles: consistent portraits, readable bios, and a clear contact action. */
+.leadership-page .leadership-team__grid { gap: clamp(22px, 3vw, 32px); }
+.leadership-page .leadership-card {
+  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+  min-height: 0;
+  border-color: #dce4e9;
+  box-shadow: 0 18px 46px rgba(17, 28, 73, .08);
+}
+.leadership-page .leadership-card__identity {
+  min-height: 390px;
+  padding: 50px 24px;
+  background-image: radial-gradient(circle at 25% 18%, rgba(255,255,255,.15), transparent 48%);
+}
+.leadership-page .leadership-card__portrait {
+  position: relative;
+  z-index: 1;
+  width: min(76%, 300px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  border: 6px solid rgba(255,255,255,.92);
+  box-shadow: 0 24px 52px rgba(5,12,42,.24);
+}
+.leadership-page .leadership-card__copy { padding: clamp(32px, 4vw, 52px); }
+.leadership-page .leadership-card__copy h2 { font-size: clamp(2rem, 3.2vw, 2.9rem); line-height: 1.08; }
+.leadership-page .leadership-card__copy > p:not(.leadership-card__role):not(.leadership-card__eyebrow) {
+  max-width: 68ch;
+  font-size: .98rem;
+  line-height: 1.7;
+}
+.leadership-card__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  margin-top: 22px;
+  padding: 11px 17px;
+  color: var(--navy);
+  background: #edf5ef;
+  border: 1px solid #c7dfcd;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: background .2s ease, border-color .2s ease;
+}
+.leadership-card__contact:hover { background: #dcefe1; border-color: var(--green-700); }
+.leadership-card__contact:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .leadership-page .leadership-card { grid-template-columns: 1fr; }
+  .leadership-page .leadership-card__identity { min-height: 300px; padding: 35px 20px; }
+  .leadership-page .leadership-card__portrait { width: min(46vw, 220px); }
+}
+@media (max-width: 600px) {
+  .leadership-page .leadership-card__identity { min-height: 260px; }
+  .leadership-page .leadership-card__portrait { width: min(52vw, 190px); }
+  .leadership-page .leadership-card__copy { padding: 30px 24px 34px; }
+}
