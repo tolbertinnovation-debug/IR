@@ -1535,7 +1535,8 @@ main > section {
   .hero__lead { font-size: 1rem; }
   .hero__actions, .hero__actions .button { width: 100%; }
   .hero__card { padding: 22px; }
-  .section { padding-block: 75px; }
+  .section { padding-block: 64px; }
+  .section-heading--center, .section-heading--split { margin-bottom: 34px; }
   .section h2, .children h2 { font-size: 2.35rem; }
   .about__visual { min-height: 430px; }
   .about__image { right: 15px; bottom: 35px; }
