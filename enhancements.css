@@ -276,12 +276,13 @@ form textarea:focus {
 
 @media (max-width: 720px) {
   html { scroll-padding-top: 96px; }
+  .site-header.is-scrolled { background: #fff; }
   .utility-bar__inner { justify-content: center; }
   .utility-bar__inner > *:first-child { display: none; }
   .brand__text { display: none; }
   .brand__logo { width: 54px; height: 54px; }
-  .inner-page .page-hero { min-height: 460px; }
-  .inner-page .page-hero__content { padding-block: 86px 70px; }
+  .inner-page .page-hero { min-height: 0; }
+  .inner-page .page-hero__content { padding-block: 56px 64px; }
   .inner-page .page-hero h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); }
   .inner-page .page-hero__overlay { background: linear-gradient(180deg, rgba(10,20,57,.58), rgba(10,20,57,.94) 76%); }
   .page-hero--about .page-hero__image,
