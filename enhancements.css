@@ -294,7 +294,7 @@ form textarea:focus {
   .irf-floating-actions { right: 14px; bottom: 14px; }
   .irf-floating-actions a { width: 48px; min-height: 48px; padding: 0; justify-content: center; }
   .irf-floating-actions a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .site-footer { padding-bottom: 92px; }
+  .site-footer { padding-bottom: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
