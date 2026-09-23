@@ -4,7 +4,7 @@ document.documentElement.classList.add('js');
 if (!document.querySelector('link[data-irf-enhancements]')) {
   const enhancementStyles = document.createElement('link');
   enhancementStyles.rel = 'stylesheet';
-  enhancementStyles.href = new URL('enhancements.css?v=20260923-2', document.currentScript.src).href;
+  enhancementStyles.href = new URL('enhancements.css?v=20260923-3', document.currentScript.src).href;
   enhancementStyles.dataset.irfEnhancements = 'true';
   document.head.appendChild(enhancementStyles);
 }
