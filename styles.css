@@ -10,7 +10,7 @@
   --sky: #3aaed8;
   --ink: #182033;
   --muted: #657085;
-  --cream: #f7f8f3;
+  --cream: #f3f7f6;
   --line: #e4e8ef;
   --white: #fff;
   --shadow-sm: 0 10px 30px rgba(17, 28, 73, .08);
@@ -1634,6 +1634,29 @@ main > section {
 .profile-doc--partnership { background: var(--cream); }
 .profile-doc--contact { background: var(--cream); }
 .profile-doc--contact a { color: var(--green-700); font-weight: 800; }
+
+/* Quiet, consistent section backgrounds across the site. The soft color stays
+   behind content; cards and photographic hero areas retain their own surfaces. */
+.about, .approach, .partners-intro, .stories, .contact,
+.about-story, .values, .impact-intro, .outcome-areas,
+.initiative-overview, .initiative-details, .partner-intro,
+.collaboration, .contact-form-section, .profile-overview,
+.profile-vision, .profile-doc:not([class*="profile-doc--"]) {
+  background: linear-gradient(155deg, #fff 38%, #f7fafb 100%);
+}
+
+.programs, .partners, .purpose, .founder, .program-process,
+.impact-pathway, .reporting, .child-principles, .initiative-faq,
+.partner-types, .partner-process, .story-templates, .story-ready,
+.contact-options, .inquiry-guidance, .support-ways,
+.support-interest, .profile-experience, .profile-flagship,
+.profile-legacy, .leadership-team, .leadership-commitments,
+.faq-facts, .photo-credits, .profile-doc--vm,
+.profile-doc--focus, .profile-doc--partnership,
+.profile-doc--contact {
+  background: radial-gradient(ellipse at 95% 5%, rgba(46, 158, 63, .075), transparent 42%),
+              linear-gradient(145deg, #f2f7f5 0%, #f7f9fc 100%);
+}
 
 @media (max-width: 900px) {
   .profile-doc__grid, .profile-doc__pair, .profile-doc__initiative { grid-template-columns: 1fr; }
