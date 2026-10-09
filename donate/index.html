@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1b2a63">
-  <meta name="description" content="Support ImpactReach Foundation in Liberia. Request verified donation instructions and choose the IRF program or initiative you would like to help.">
+  <meta name="description" content="International donation and bank transfer instructions for ImpactReach Foundation in Liberia. Confirm the account number and routing with IRF and your bank before sending funds.">
   <meta property="og:title" content="Donate | ImpactReach Foundation">
-  <meta property="og:description" content="Begin a safe, verified donation conversation with ImpactReach Foundation in Liberia.">
+  <meta property="og:description" content="Support IRF through an international bank transfer. View beneficiary, bank, and routing details, and confirm instructions before sending funds.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://impactreachglobal.org/donate/">
   <meta property="og:url" content="https://impactreachglobal.org/donate/">
@@ -19,12 +19,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Donate | ImpactReach Foundation">
   <meta name="twitter:image" content="https://impactreachglobal.org/assets/children-community.png">
-  <meta name="twitter:description" content="Support ImpactReach Foundation in Liberia. Request verified donation instructions and choose the IRF program or initiative you would like to help.">
+  <meta name="twitter:description" content="International donation and bank transfer instructions for IRF. Confirm the account number and routing before sending funds.">
   <title>Donate | ImpactReach Foundation</title>
   <link rel="icon" href="../assets/irf-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="../styles.css?v=20260923-3">
   <link rel="stylesheet" href="../footer-credit.css?v=20260923-1">
+  <link rel="stylesheet" href="../donation-transfer.css?v=20261009-1">
   <script defer src="../script.js?v=20260923-3"></script>
+  <script defer src="../donation-transfer.js?v=20261009-1"></script>
 </head>
 <body class="inner-page donate-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -72,19 +74,113 @@
         <h1 id="page-title">Help turn compassion into opportunity.</h1>
         <p>Your donation can help IRF pursue education, empowerment, livelihood, recovery, family-strengthening, and child-support initiatives in Liberia.</p>
         <div class="support-hero__actions">
-          <a class="button button--orange" href="#donation-interest">Start a donation inquiry <span aria-hidden="true">→</span></a>
-          <a class="button button--ghost" href="../programs/">Explore the programs</a>
+          <a class="button button--orange" href="#bank-transfer">Bank transfer instructions <span aria-hidden="true">→</span></a>
+          <a class="button button--ghost" href="#donation-interest">Contact IRF about giving</a>
         </div>
       </div>
     </section>
 
-    <aside class="giving-notice" aria-label="Verified donation information">
+    <aside class="giving-notice" aria-label="Donation confirmation reminder">
       <div class="container giving-notice__inner">
         <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3.5 7.2v5.5c0 4.1 3.6 7.2 8.5 8.3 4.9-1.1 8.5-4.2 8.5-8.3V7.2L12 3Zm-1 12.2-3-3 1.4-1.4 1.6 1.6 3.7-3.7 1.4 1.4-5.1 5.1Z"/></svg></span>
-        <p><strong>Give safely.</strong> IRF has not yet published bank, mobile-money, card, or online-payment instructions on this website. Request and verify current details through an official IRF email before sending funds or items.</p>
-        <a href="mailto:impactreachfoundation@gmail.com?subject=Request%20for%20verified%20IRF%20donation%20information">Request details <span aria-hidden="true">→</span></a>
+        <p><strong>Confirm before sending.</strong> International bank transfer details supplied by IRF are available below. Verify the beneficiary account number and required routing with IRF and your bank before making a transfer.</p>
+        <a href="#transfer-confirmation">Read the confirmation note <span aria-hidden="true">→</span></a>
       </div>
     </aside>
+
+    <section class="wire-transfer" id="bank-transfer" aria-labelledby="bank-transfer-title">
+      <div class="container">
+        <div class="wire-transfer__heading">
+          <p class="eyebrow"><span></span> Give from wherever you are</p>
+          <h2 id="bank-transfer-title">International donation and bank transfer instructions</h2>
+          <p class="wire-transfer__motto">Reaching Life. Transforming Future.</p>
+          <p>IRF has obtained international bank transfer instructions from its bank in Liberia. You can provide the following information to your bank in the United States or elsewhere when arranging an international wire transfer to support ImpactReach Foundation.</p>
+        </div>
+
+        <aside class="wire-confirmation" id="transfer-confirmation" aria-labelledby="transfer-confirmation-title">
+          <h3 id="transfer-confirmation-title">Important: confirm these details before sending</h3>
+          <ol>
+            <li><strong>Verify the beneficiary account number.</strong> The account number below was transcribed from a handwritten document as <span class="wire-code">00821761616140102</span>. Compare every digit with the original bank-issued account details and confirm it with IRF and the beneficiary bank.</li>
+            <li><strong>Confirm the international transfer routing.</strong> Ask your sending bank and International Bank (Liberia) Limited to confirm the SWIFT/BIC, intermediary bank, and whether the Citibank New York correspondent details are required for your transfer.</li>
+          </ol>
+          <p>If your bank requests additional information, please contact IRF before completing the transaction. <a href="https://ibliberia.com/money-transfer-service/" target="_blank" rel="noopener noreferrer">Visit International Bank’s transfer services page <span aria-hidden="true">↗</span></a></p>
+        </aside>
+
+        <div class="wire-transfer__tools">
+          <p>Share these details with your bank after confirmation.</p>
+          <button class="wire-copy" type="button" data-copy-all hidden>Copy all transfer instructions</button>
+        </div>
+        <p class="wire-copy-status" role="status" aria-live="polite" data-copy-status></p>
+        <div class="wire-transfer__grid">
+          <article class="wire-card" data-transfer-copy-block>
+            <h3><span class="wire-card__number" aria-hidden="true">01</span> Beneficiary details</h3>
+            <dl>
+              <div><dt>Beneficiary name</dt><dd>ImpactReach Foundation (IRF)</dd></div>
+              <div><dt>Beneficiary account number</dt><dd><span class="wire-code" id="beneficiary-account">00821761616140102</span><button class="wire-copy wire-copy--small" type="button" data-copy-target="beneficiary-account" data-copy-label="Account number" hidden>Copy account number</button></dd></div>
+              <div><dt>Beneficiary address</dt><dd>Rock Hill, ELWA, Paynesville City, Liberia.</dd></div>
+            </dl>
+          </article>
+          <article class="wire-card" data-transfer-copy-block>
+            <h3><span class="wire-card__number" aria-hidden="true">02</span> Beneficiary bank details</h3>
+            <dl>
+              <div><dt>Bank name</dt><dd>International Bank (Liberia) Limited</dd></div>
+              <div><dt>Bank address</dt><dd>P.O. Box 10-292, Tubman Boulevard, between 11th and 12th Streets, Monrovia, Liberia.</dd></div>
+              <div><dt>SWIFT/BIC code</dt><dd><span class="wire-code" id="beneficiary-swift">IBLRLRLM</span><button class="wire-copy wire-copy--small" type="button" data-copy-target="beneficiary-swift" data-copy-label="Beneficiary bank SWIFT/BIC" hidden>Copy SWIFT/BIC</button></dd></div>
+              <div><dt>Country</dt><dd>Liberia</dd></div>
+            </dl>
+          </article>
+          <article class="wire-card" data-transfer-copy-block>
+            <h3><span class="wire-card__number" aria-hidden="true">03</span> Intermediary bank details</h3>
+            <p class="wire-card__note">Your sending bank may require these intermediary bank details. Confirm the routing before use.</p>
+            <dl>
+              <div><dt>Intermediary bank</dt><dd>Crown Agents Bank</dd></div>
+              <div><dt>SWIFT code</dt><dd><span class="wire-code" id="intermediary-swift">CRASGB2L</span><button class="wire-copy wire-copy--small" type="button" data-copy-target="intermediary-swift" data-copy-label="Intermediary bank SWIFT" hidden>Copy SWIFT</button></dd></div>
+              <div><dt>Bank address</dt><dd>Quadrant House, The Quadrant, Sutton, Surrey SM2 5AS, London, United Kingdom.</dd></div>
+            </dl>
+          </article>
+          <article class="wire-card" data-transfer-copy-block>
+            <h3><span class="wire-card__number" aria-hidden="true">04</span> Correspondent bank details</h3>
+            <p class="wire-card__note">Please allow your bank to confirm whether these correspondent bank details are required for the transfer.</p>
+            <dl>
+              <div><dt>Correspondent bank</dt><dd>Citibank New York</dd></div>
+              <div><dt>SWIFT code</dt><dd><span class="wire-code" id="correspondent-swift">CITIUS33</span><button class="wire-copy wire-copy--small" type="button" data-copy-target="correspondent-swift" data-copy-label="Correspondent bank SWIFT" hidden>Copy SWIFT</button></dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="wire-reference" data-transfer-copy-block>
+          <h3><span class="wire-card__number" aria-hidden="true">05</span> Payment reference</h3>
+          <p>When making the transfer, please indicate the purpose of the payment as:</p>
+          <blockquote id="payment-reference">Donation to ImpactReach Foundation (IRF) for charitable and humanitarian activities in Liberia.</blockquote>
+          <button class="wire-copy" type="button" data-copy-target="payment-reference" data-copy-label="Payment reference" hidden>Copy payment reference</button>
+        </div>
+
+        <div class="wire-commitment">
+          <div>
+            <p class="eyebrow eyebrow--light"><span></span> Our commitment</p>
+            <h3>Reach vulnerable people. Bring hope.</h3>
+            <p>ImpactReach Foundation is committed to reaching vulnerable people, expanding educational opportunities, empowering families, and creating a greater future for communities across Liberia.</p>
+            <p>Your support will help us advance this mission and bring hope to people who need it most.</p>
+            <p class="wire-commitment__signature">With love and appreciation,<br><strong>Apostle Michael Whea Mardeh</strong><br>Founder &amp; CEO<br>ImpactReach Foundation (IRF)</p>
+            <p class="wire-commitment__motto">Reaching Life. Transforming Future.</p>
+          </div>
+          <div class="wire-contact">
+            <h3>Contact IRF before your transfer</h3>
+            <address>
+              <p>Rock Hill, ELWA, Paynesville City, Liberia</p>
+              <ul>
+                <li><a href="tel:+231773224296">+231 773 224 296</a></li>
+                <li><a href="tel:+231886421636">+231 886 421 636</a></li>
+                <li><a href="tel:+231770255066">+231 770 255 066</a></li>
+              </ul>
+              <p><a href="mailto:impactreachfoundation@gmail.com">impactreachfoundation@gmail.com</a></p>
+              <p><a href="https://impactreachglobal.org/">impactreachglobal.org</a></p>
+            </address>
+            <a class="button button--white" href="mailto:impactreachfoundation@gmail.com?subject=Confirm%20IRF%20international%20bank%20transfer%20details">Confirm transfer details <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="support-ways" aria-labelledby="donation-ways-title">
       <div class="container">
@@ -93,7 +189,7 @@
           <p>Every pathway begins with direct confirmation so the current need, purpose, instructions, and expectations are clear.</p>
         </div>
         <div class="support-ways__grid">
-          <article data-reveal><span class="support-ways__number">01</span><span class="support-ways__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29 4 19a8 8 0 0 1 11.3-11.3l.7.7.7-.7A8 8 0 0 1 28 19L16 29Zm0-5.2 9-7.5A4.5 4.5 0 0 0 18.7 10L16 12.7 13.3 10A4.5 4.5 0 0 0 7 16.3l9 7.5Z"/></svg></span><h3>One-time gift</h3><p>Ask for verified instructions for a single financial contribution and identify the purpose you would like to support.</p><a href="#donation-interest">Start an inquiry <span aria-hidden="true">→</span></a></article>
+          <article data-reveal><span class="support-ways__number">01</span><span class="support-ways__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 29 4 19a8 8 0 0 1 11.3-11.3l.7.7.7-.7A8 8 0 0 1 28 19L16 29Zm0-5.2 9-7.5A4.5 4.5 0 0 0 18.7 10L16 12.7 13.3 10A4.5 4.5 0 0 0 7 16.3l9 7.5Z"/></svg></span><h3>One-time gift</h3><p>View the international bank transfer details and confirm the account number and routing before contributing.</p><a href="#bank-transfer">View bank instructions <span aria-hidden="true">→</span></a></article>
           <article data-reveal><span class="support-ways__number">02</span><span class="support-ways__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 1 0 12.2 17.5l-4.4-1.6A8.4 8.4 0 1 1 21 8.7L17 13h12V1l-4.7 4.7A12.9 12.9 0 0 0 16 3Z"/></svg></span><h3>Recurring support inquiry</h3><p>Discuss whether a regular giving arrangement is available and request the current approved process directly from IRF.</p><a href="#donation-interest">Discuss regular giving <span aria-hidden="true">→</span></a></article>
           <article data-reveal><span class="support-ways__number">03</span><span class="support-ways__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 2 10l14 7 11-5.5V21h3V10L16 3ZM7 16v7c0 3.3 4 6 9 6s9-2.7 9-6v-7l-9 4.5L7 16Z"/></svg></span><h3>Support 100 Children</h3><p>Express interest in educational support connected to the “100 Children, One Greater Future” initiative.</p><a href="../children/">Explore the initiative <span aria-hidden="true">→</span></a></article>
           <article data-reveal><span class="support-ways__number">04</span><span class="support-ways__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8h24v18H4V8Zm4 4v10h16V12H8Zm5-8h6v4h-6V4Z"/></svg></span><h3>In-kind donation</h3><p>Contact IRF before sending goods, equipment, learning materials, or other resources so the need and delivery arrangements can be confirmed.</p><a href="#donation-interest">Offer an item <span aria-hidden="true">→</span></a></article>
@@ -163,7 +259,8 @@
         <div data-reveal><p class="eyebrow"><span></span> Donation questions</p><h2 id="donation-faq-title">Know what to expect.</h2><p>These answers reflect the information currently approved for the IRF website.</p></div>
         <div class="support-faq__items" data-reveal>
           <details open><summary>Can I enter card or bank details on this website?</summary><p>No. The IRF website does not request or process card, bank, or mobile-money account details.</p></details>
-          <details><summary>Can I donate immediately online?</summary><p>No official online payment method is currently displayed. Contact IRF to request and verify the available donation process.</p></details>
+          <details><summary>How can I donate by international bank transfer?</summary><p>Use the <a href="#bank-transfer">international bank transfer instructions</a> on this page after confirming the account number and required routing with IRF and your bank. Your bank handles the transfer; this website does not process payments.</p></details>
+          <details><summary>Can I pay by card or mobile money on this website?</summary><p>No card checkout or mobile-money payment method is currently available here. Contact IRF to discuss available ways to give.</p></details>
           <details><summary>Can I choose a program to support?</summary><p>You may identify a preferred program or initiative in your inquiry. IRF will confirm current needs and whether designated support can be accepted.</p></details>
           <details><summary>Can an organization make a donation?</summary><p>Yes, an organization may begin a conversation about financial, in-kind, or partnership support and provide the relevant organizational details.</p></details>
           <details><summary>Can I donate goods or learning materials?</summary><p>Contact IRF before sending anything so the need, quantity, condition, delivery plan, and intended use can be confirmed.</p></details>
@@ -181,7 +278,7 @@
     </div>
     <div class="container footer__bottom">
       <p class="footer__copyright">© 2026 ImpactReach Foundation. All rights reserved. Powered by <a class="powered-by" href="https://tolbertinnovationhub.org/">Tolbert Innovation Hub</a>.</p>
-      <p class="footer__motto">Reaching Lives. Transforming Futures. · <a href="../credits/">Photo credits</a></p>
+      <p class="footer__motto">Reaching Life. Transforming Future. · <a href="../credits/">Photo credits</a></p>
     </div>
   </footer>
 </body>

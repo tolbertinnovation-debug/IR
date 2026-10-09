@@ -16,6 +16,7 @@ Responsive multi-page website for ImpactReach Foundation, a Liberian humanitaria
 - Contact
 - Support Us
 - Donation page
+- International bank transfer instructions with account and routing confirmation reminders, copy buttons, and IRF contact details
 - Frequently Asked Questions
 - Photo credits and licensing
 - Mobile-first responsive navigation and layout
