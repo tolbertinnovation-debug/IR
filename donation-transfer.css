@@ -1,0 +1,55 @@
+.wire-transfer {
+  padding-block: clamp(56px, 7vw, 96px);
+  background: #f5f8f7;
+  scroll-margin-top: 130px;
+}
+.wire-transfer__heading { max-width: 850px; margin-bottom: 30px; }
+.wire-transfer__heading h2 { margin: 0 0 16px; color: var(--navy); font-size: clamp(1.8rem, 3.8vw, 3rem); line-height: 1.18; letter-spacing: -.03em; }
+.wire-transfer__heading > p:last-child { color: var(--muted); }
+.wire-transfer__motto { margin: 0; color: var(--green-700); font-weight: 800; }
+.wire-confirmation { padding: clamp(20px, 3vw, 30px); background: #fff8e9; border: 1px solid #e3c783; border-left: 5px solid var(--orange); border-radius: 16px; scroll-margin-top: 130px; }
+.wire-confirmation h3 { margin: 0 0 12px; color: var(--navy); font-size: 1.15rem; }
+.wire-confirmation ol { margin: 0; padding-left: 22px; }
+.wire-confirmation li + li { margin-top: 12px; }
+.wire-confirmation p { margin: 16px 0 0; }
+.wire-confirmation a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+.wire-transfer__tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 28px; }
+.wire-transfer__tools p { margin: 0; color: var(--muted); }
+.wire-copy { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; color: var(--navy); background: var(--white); border: 1px solid #b3bfce; border-radius: 10px; font-size: .85rem; font-weight: 750; cursor: pointer; }
+.wire-copy[hidden] { display: none; }
+.wire-copy:hover { background: #eaf1f6; }
+.wire-copy--small { margin-top: 8px; font-size: .78rem; }
+.wire-copy-status { min-height: 28px; margin: 12px 0; color: var(--navy); font-size: .9rem; }
+.wire-transfer__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.wire-card { min-width: 0; padding: clamp(20px, 3vw, 32px); background: var(--white); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow-sm); }
+.wire-card h3, .wire-reference h3 { display: flex; gap: 12px; align-items: center; margin: 0 0 20px; color: var(--navy); font-size: 1.12rem; line-height: 1.4; }
+.wire-card__number { flex: 0 0 38px; height: 38px; display: inline-grid; place-items: center; color: var(--green-700); background: #edf7ef; border-radius: 10px; font-size: .8rem; font-weight: 850; }
+.wire-card dl { margin: 0; }
+.wire-card dl > div + div { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.wire-card dt { color: var(--muted); font-size: .78rem; font-weight: 700; }
+.wire-card dd { margin: 4px 0 0; color: var(--ink); overflow-wrap: anywhere; }
+.wire-card dd .wire-copy { display: flex; width: fit-content; }
+.wire-card dd .wire-copy[hidden] { display: none; }
+.wire-code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 1em; font-weight: 750; letter-spacing: .03em; overflow-wrap: anywhere; user-select: all; }
+.wire-card__note { margin: -4px 0 20px; color: var(--muted); font-size: .88rem; }
+.wire-reference { margin-top: 22px; padding: clamp(20px, 3vw, 32px); background: #eaf3ee; border: 1px solid #c7ddcd; border-radius: 20px; }
+.wire-reference h3 { margin-bottom: 12px; }
+.wire-reference p { margin: 0; }
+.wire-reference blockquote { margin: 16px 0; padding-left: 18px; color: var(--navy); border-left: 3px solid var(--green-700); font-size: clamp(1rem, 2vw, 1.22rem); font-weight: 650; user-select: all; }
+.wire-commitment { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(24px, 5vw, 60px); margin-top: 32px; padding: clamp(24px, 4vw, 46px); color: var(--white); background: var(--navy); border-radius: 24px; }
+.wire-commitment > div { min-width: 0; }
+.wire-commitment h3 { margin: 0 0 16px; color: var(--white); font-size: 1.35rem; line-height: 1.35; }
+.wire-commitment p { color: #e4e9f3; font-size: .95rem; }
+.wire-commitment__signature { margin-top: 24px; }
+.wire-commitment__signature strong { color: var(--white); }
+.wire-commitment .wire-commitment__motto { color: #ffd084; font-weight: 750; }
+.wire-contact { padding-left: clamp(0px, 3vw, 36px); border-left: 1px solid #526089; }
+.wire-contact address { font-style: normal; }
+.wire-contact ul { display: grid; gap: 6px; padding: 0; list-style: none; }
+.wire-contact address a { display: inline-block; padding-block: 4px; overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 4px; }
+.wire-contact .button { margin-top: 12px; }
+@media (max-width: 720px) {
+  .wire-transfer__grid, .wire-commitment { grid-template-columns: 1fr; }
+  .wire-contact { padding: 24px 0 0; border-left: 0; border-top: 1px solid #526089; }
+  .wire-transfer__tools .wire-copy { width: 100%; }
+}
