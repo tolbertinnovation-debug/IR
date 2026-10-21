@@ -61,3 +61,20 @@
   .leadership-page .leadership-card__portrait { width: min(52vw, 190px); }
   .leadership-page .leadership-card__copy { padding: 30px 24px 34px; }
 }
+
+/* Preserve the complete board leadership image, including its name and title. */
+.leadership-page .leadership-card--board .leadership-card__identity {
+  padding: 24px;
+  min-height: 0;
+  background-color: var(--navy);
+}
+.leadership-page .leadership-card--board .leadership-card__portrait {
+  width: min(100%, 380px);
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 16px;
+}
+.leadership-page .leadership-card--board .leadership-card__copy {
+  justify-content: center;
+}

@@ -1,0 +1,23 @@
+
+/* Official launch: styles scoped to the announcement and event section. */
+.launch-notice { display: block; padding: 15px 24px; background: #167139; color: #fff; text-align: center; text-decoration: none; font-weight: 700; line-height: 1.6; }
+.launch-notice:hover { background: #10572b; color: #fff; }
+.launch-notice:focus-visible { outline: 3px solid #f5a623; outline-offset: -4px; }
+.launch-event { padding: clamp(48px, 7vw, 88px) 0; background: #f1f6fb; scroll-margin-top: 110px; }
+.launch-event__panel { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); border: 1px solid #d8e3ef; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 18px 46px rgba(17,28,73,.08); }
+.launch-event__copy, .launch-event__details { padding: clamp(24px, 4vw, 48px); min-width: 0; }
+.launch-event h2 { margin: 10px 0 18px; color: #1b2a63; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.1; }
+.launch-event h3 { color: #1b2a63; font-size: 1.3rem; margin: 26px 0 10px; }
+.launch-event p { line-height: 1.75; }
+.launch-event__theme { color: #167139; font-weight: 800; }
+.launch-event__details { background: #112049; color: #fff; }
+.launch-event__details h3 { margin-top: 0; color: #fff; }
+.launch-event__details dl { margin: 24px 0; }
+.launch-event__details dt { color: #b7dce9; font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-top: 22px; }
+.launch-event__details dd { margin: 6px 0 0; line-height: 1.7; font-weight: 600; }
+.launch-event__details a:not(.button) { color: #fff; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.launch-event__phones { display: grid; gap: 10px; margin-top: 18px; }
+.launch-event__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.launch-event__closing { margin: 24px 0 0; font-weight: 800; color: #167139; }
+@media (max-width: 800px) { .launch-event__panel { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .launch-event__actions .button { width: 100%; text-align: center; } .launch-notice { font-size: .88rem; } }
