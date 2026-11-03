@@ -11,7 +11,7 @@ Responsive multi-page website for ImpactReach Foundation, a Liberian humanitaria
 - Our Programs
 - Our Impact
 - 100 Children initiative
-- Partners
+- Partners (International Partnerships & Global Outreach, The One Greater Future Initiative)
 - News & Stories
 - Contact
 - Support Us

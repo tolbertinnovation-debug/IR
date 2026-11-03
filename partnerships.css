@@ -1,0 +1,82 @@
+/* International Partnerships & Global Outreach (partners page) */
+
+/* Objectives */
+.gp-objectives__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.gp-objectives__grid li { display: flex; flex-direction: column; gap: 18px; min-height: 210px; padding: 26px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease; }
+.gp-objectives__grid li:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); }
+.gp-objectives__grid span { width: 48px; height: 48px; display: grid; place-items: center; color: var(--white); background: var(--navy); border-radius: 14px; font-size: .78rem; font-weight: 900; }
+.gp-objectives__grid li:nth-child(even) span { background: var(--green-700); }
+.gp-objectives__grid p { margin: 0; color: var(--ink); font-size: .92rem; line-height: 1.55; }
+
+/* Flagship initiative */
+.gp-flagship { position: relative; overflow: hidden; padding-block: clamp(90px, 11vw, 140px); color: var(--white); background: linear-gradient(135deg, var(--navy-900), var(--navy)); }
+.gp-flagship__inner { position: relative; z-index: 1; }
+.gp-flagship .section-heading h2 { color: var(--white); font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.05; letter-spacing: -.04em; }
+.gp-flagship .section-heading p:not(.eyebrow) { color: rgba(255,255,255,.75); }
+.gp-flagship__feature { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.gp-flagship__card { display: flex; flex-direction: column; padding: clamp(28px, 4vw, 42px); color: var(--ink); background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 8px solid var(--orange); }
+.gp-flagship__card--green { border-top-color: var(--green); }
+.gp-flagship__number { color: var(--orange-text); font-size: .74rem; font-weight: 900; letter-spacing: .13em; }
+.gp-flagship__card--green .gp-flagship__number { color: var(--green-700); }
+.gp-flagship__card h3 { margin: 10px 0 6px; color: var(--navy); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.15; letter-spacing: -.02em; }
+.gp-flagship__stat { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+.gp-flagship__stat strong { color: var(--navy); font-size: clamp(2.6rem, 5.5vw, 3.6rem); line-height: 1; letter-spacing: -.04em; }
+.gp-flagship__stat small { color: var(--muted); font-weight: 700; }
+.gp-flagship__card > p:not(.gp-flagship__stat) { margin: 10px 0 0; color: var(--muted); }
+.gp-flagship__card .button { align-self: flex-start; margin-top: 26px; }
+.gp-flagship__more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.gp-flagship__more article { padding: 26px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius); }
+.gp-flagship__more span { width: 46px; height: 46px; display: grid; place-items: center; color: var(--navy); background: var(--orange); border-radius: 14px; font-size: .75rem; font-weight: 900; }
+.gp-flagship__more article:nth-child(even) span { color: var(--green); background: var(--white); }
+.gp-flagship__more h3 { margin: 20px 0 8px; font-size: 1.08rem; }
+.gp-flagship__more p { margin: 0; color: rgba(255,255,255,.7); font-size: .86rem; }
+
+/* Who can partner / ways to partner */
+.gp-lists__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+.gp-lists__panel { padding: clamp(28px, 4vw, 44px); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.gp-lists__panel h2 { margin: 0 0 22px; color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.1; letter-spacing: -.03em; }
+.gp-checklist { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.gp-checklist li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; color: var(--ink); font-size: .93rem; }
+.gp-checklist svg { width: 28px; height: 28px; padding: 5px; fill: var(--white); background: var(--green); border-radius: 50%; }
+.gp-lists__panel:last-child .gp-checklist svg { background: var(--navy); }
+.gp-checklist span { padding-top: 3px; }
+
+/* Commitments (reuses partnership-principles cards) */
+.gp-commitments { grid-template-columns: 1fr 1fr; }
+
+/* Belief statement */
+.gp-belief { background: var(--white); }
+.gp-belief__quote { max-width: 900px; margin: 0 auto; padding-left: clamp(20px, 3vw, 34px); border-left: 6px solid var(--orange); }
+.gp-belief__quote p { margin: 0; color: var(--navy); font-size: clamp(1.35rem, 2.8vw, 2rem); font-weight: 800; line-height: 1.35; letter-spacing: -.02em; }
+
+/* Contact */
+.gp-together { margin-top: 24px; padding: 18px 20px; background: rgba(255,255,255,.1); border-left: 4px solid var(--orange); border-radius: 12px; }
+.gp-together strong { color: var(--white); }
+.gp-contact-card { padding: clamp(26px, 4vw, 36px); color: var(--ink); background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+.gp-contact-card h3 { margin: 0; color: var(--navy); font-size: 1.3rem; }
+.gp-contact-card address { margin: 6px 0 18px; color: var(--muted); font-style: normal; font-size: .9rem; }
+.gp-contact-card dl { display: grid; gap: 14px; margin: 0; }
+.gp-contact-card dl > div { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
+.gp-contact-card dt { color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.gp-contact-card dd { margin: 0; overflow-wrap: anywhere; font-size: .92rem; }
+.gp-contact-card dd ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.gp-contact-card a { color: var(--green-700); font-weight: 800; }
+.gp-contact-card .button { color: var(--navy); }
+.gp-contact-card__button { width: 100%; justify-content: center; margin-top: 22px; }
+.gp-contact-card__tagline { display: grid; gap: 2px; margin: 18px 0 0; text-align: center; }
+.gp-contact-card__tagline strong { color: var(--navy); }
+.gp-contact-card__tagline span { color: var(--orange-text); font-weight: 700; font-size: .88rem; }
+
+@media (max-width: 1000px) {
+  .gp-objectives__grid { grid-template-columns: 1fr 1fr; }
+  .gp-flagship__more { grid-template-columns: 1fr; }
+}
+@media (max-width: 820px) {
+  .gp-flagship__feature, .gp-lists__grid, .gp-commitments { grid-template-columns: 1fr; }
+}
+@media (max-width: 580px) {
+  .gp-objectives__grid { grid-template-columns: 1fr; }
+  .gp-objectives__grid li { min-height: 0; }
+  .gp-contact-card dl > div { grid-template-columns: 1fr; gap: 4px; }
+  .gp-flagship__card .button { align-self: stretch; justify-content: center; }
+}
