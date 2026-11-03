@@ -10,8 +10,8 @@ Responsive multi-page website for ImpactReach Foundation, a Liberian humanitaria
 - Leadership team
 - Our Programs
 - Our Impact
-- 100 Children initiative
-- Partners
+- Flagship Programs: 2,000 Children, One Greater Future; 10,000 Children by 2031; Scholarship & International Educational Opportunities
+- Partners (International Partnerships & Global Outreach, The One Greater Future Initiative)
 - News & Stories
 - Contact
 - Support Us
