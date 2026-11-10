@@ -34,3 +34,20 @@
 .launch-flyers figcaption strong { color: #1b2a63; }
 .launch-flyers figcaption a { color: #167139; font-weight: 800; }
 @media (max-width: 800px) { .launch-flyers__grid { grid-template-columns: 1fr; } }
+
+/* Post-launch message of appreciation */
+.launch-thanks { padding: clamp(56px, 8vw, 100px) 0; background: linear-gradient(155deg, #fff 38%, #f2f7f5 100%); scroll-margin-top: 110px; }
+.launch-thanks__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.launch-thanks h2 { margin: 10px 0 18px; color: #1b2a63; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.08; letter-spacing: -.03em; }
+.launch-thanks__copy p:not(.eyebrow) { line-height: 1.75; color: #4a5568; }
+.launch-thanks__copy .lead { color: #182033; }
+.launch-thanks__call { padding: clamp(24px, 4vw, 42px); color: #fff; background: linear-gradient(145deg, #111c49, #1b2a63); border-radius: 24px; box-shadow: 0 18px 46px rgba(17,28,73,.14); border-top: 6px solid #f5a623; }
+.launch-thanks__call h3 { margin: 0 0 14px; color: #fff; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.2; text-transform: none; }
+.launch-thanks__call p { color: rgba(255,255,255,.82); line-height: 1.7; }
+.launch-thanks__highlight { padding: 14px 18px; background: rgba(255,255,255,.08); border-left: 4px solid #2e9e3f; border-radius: 10px; color: #fff !important; font-weight: 800; }
+.launch-thanks__sign { display: grid; gap: 2px; margin-top: 22px; }
+.launch-thanks__sign strong { color: #fff; letter-spacing: .06em; }
+.launch-thanks__sign span { color: #f5a623; font-weight: 700; }
+.launch-thanks__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+@media (max-width: 860px) { .launch-thanks__grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .launch-thanks__actions .button { width: 100%; justify-content: center; } }
