@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://impactreachglobal.org/contact/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://impactreachglobal.org/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://impactreachglobal.org/stories/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -74,5 +74,10 @@
     <loc>https://impactreachglobal.org/profile/</loc>
     <lastmod>2026-09-18</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://impactreachglobal.org/stories/launch-appreciation/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
