@@ -94,3 +94,26 @@
   .fi-jump a { flex: 0 0 auto; }
   .fi-connect-actions, .fi-connect-actions .button { width: 100%; justify-content: center; }
 }
+
+/* Program navigation (current page) and overview hub */
+.fi-jump a[aria-current="page"] { color: var(--white); background: var(--navy); border-color: var(--navy); }
+.fi-jump a[aria-current="page"] span { color: var(--navy); background: var(--orange); }
+.fi-jump--bottom { border-top: 1px solid var(--line); border-bottom: 0; }
+.fi-jump--bottom .fi-jump__inner { justify-content: center; padding-block: 26px; }
+.fi-hub { background: var(--white); }
+.fi-hub__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.fi-hub__card { display: flex; flex-direction: column; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); color: inherit; transition: transform .25s ease, box-shadow .25s ease; }
+.fi-hub__card:hover { transform: translateY(-6px); box-shadow: var(--shadow-sm); }
+.fi-hub__media { position: relative; display: grid; place-items: end start; min-height: 190px; padding: 20px 22px; background-size: cover; background-position: center; }
+.fi-hub__media::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,20,57,.15), rgba(10,20,57,.82)); }
+.fi-hub__media b { position: relative; color: var(--white); font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1; letter-spacing: -.04em; }
+.fi-hub__media--2000 { background-image: url("assets/children-community.jpg"); }
+.fi-hub__media--10000 { background-image: url("assets/child-learning.jpg"); }
+.fi-hub__media--scholar { background-image: url("assets/youth-employment.jpg"); background-position: center 30%; }
+.fi-hub__media--scholar b { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.fi-hub__body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 24px; }
+.fi-hub__body small { color: var(--green-700); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.fi-hub__body strong { color: var(--navy); font-size: 1.22rem; line-height: 1.25; }
+.fi-hub__body > span { color: var(--muted); font-size: .9rem; }
+.fi-hub__body em { margin-top: auto; padding-top: 10px; color: var(--green-700); font-style: normal; font-weight: 800; }
+@media (max-width: 900px) { .fi-hub__grid { grid-template-columns: 1fr; } .fi-hub__media { min-height: 150px; } }
