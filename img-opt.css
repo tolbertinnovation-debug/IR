@@ -1,0 +1,54 @@
+/* Faster images: WebP with JPEG fallback, and smaller files on phones and in cards.
+   Generated from the background-image rules in styles.css, launch-2026.css, stories.css and flagship.css.
+   Load this stylesheet after the others. */
+.hero__image { background-image: url("assets/children-community.jpg"); background-image: image-set(url("assets/children-community.webp") type("image/webp"), url("assets/children-community.jpg") type("image/jpeg")); }
+.about__image { background-image: url("assets/family-support.jpg"); background-image: image-set(url("assets/family-support.webp") type("image/webp"), url("assets/family-support.jpg") type("image/jpeg")); }
+.page-hero--about .page-hero__image { background-image: url("assets/family-support.jpg"); background-image: image-set(url("assets/family-support.webp") type("image/webp"), url("assets/family-support.jpg") type("image/jpeg")); }
+.page-hero--programs .page-hero__image { background-image: url("assets/women-tailoring.jpg"); background-image: image-set(url("assets/women-tailoring.webp") type("image/webp"), url("assets/women-tailoring.jpg") type("image/jpeg")); }
+.page-hero--impact .page-hero__image { background-image: url("assets/community-farmer.jpg"); background-image: image-set(url("assets/community-farmer.webp") type("image/webp"), url("assets/community-farmer.jpg") type("image/jpeg")); }
+.page-hero--children .page-hero__image { background-image: url("assets/child-learning.jpg"); background-image: image-set(url("assets/child-learning.webp") type("image/webp"), url("assets/child-learning.jpg") type("image/jpeg")); }
+.page-hero--partners .page-hero__image { background-image: url("assets/youth-employment.jpg"); background-image: image-set(url("assets/youth-employment.webp") type("image/webp"), url("assets/youth-employment.jpg") type("image/jpeg")); }
+.page-hero--stories .page-hero__image { background-image: url("assets/vocational-tailoring.jpg"); background-image: image-set(url("assets/vocational-tailoring.webp") type("image/webp"), url("assets/vocational-tailoring.jpg") type("image/jpeg")); }
+.news-card__media--program { background-image: url("assets/women-tailoring-800.jpg"); background-image: image-set(url("assets/women-tailoring-800.webp") type("image/webp"), url("assets/women-tailoring-800.jpg") type("image/jpeg")); }
+.news-card__media--community { background-image: url("assets/community-farmer-800.jpg"); background-image: image-set(url("assets/community-farmer-800.webp") type("image/webp"), url("assets/community-farmer-800.jpg") type("image/jpeg")); }
+.news-card__media--press { background-image: url("assets/youth-employment-800.jpg"); background-image: image-set(url("assets/youth-employment-800.webp") type("image/webp"), url("assets/youth-employment-800.jpg") type("image/jpeg")); }
+.page-hero--contact .page-hero__image { background-image: url("assets/children-community.jpg"); background-image: image-set(url("assets/children-community.webp") type("image/webp"), url("assets/children-community.jpg") type("image/jpeg")); }
+.page-hero--support .page-hero__image { background-image: url("assets/family-support.jpg"); background-image: image-set(url("assets/family-support.webp") type("image/webp"), url("assets/family-support.jpg") type("image/jpeg")); }
+.page-hero--profile .page-hero__image { background-image: url("assets/family-support.jpg"); background-image: image-set(url("assets/family-support.webp") type("image/webp"), url("assets/family-support.jpg") type("image/jpeg")); }
+.home-news__media--thanks { background-image: url("assets/launch-flyer-keynote-2026-800.jpg"); background-image: image-set(url("assets/launch-flyer-keynote-2026-800.webp") type("image/webp"), url("assets/launch-flyer-keynote-2026-800.jpg") type("image/jpeg")); }
+.home-news__media--launch { background-image: url("assets/launch/launch-team-thumb.jpg"); background-image: image-set(url("assets/launch/launch-team-thumb.webp") type("image/webp"), url("assets/launch/launch-team-thumb.jpg") type("image/jpeg")); }
+.home-news__media--flagship { background-image: url("assets/children-community-800.jpg"); background-image: image-set(url("assets/children-community-800.webp") type("image/webp"), url("assets/children-community-800.jpg") type("image/jpeg")); }
+.page-hero--launch .page-hero__image { background-image: url("assets/launch/launch-team.jpg"); background-image: image-set(url("assets/launch/launch-team.webp") type("image/webp"), url("assets/launch/launch-team.jpg") type("image/jpeg")); }
+.news-card__media--appreciation { background-image: url("assets/launch-flyer-keynote-2026-800.jpg"); background-image: image-set(url("assets/launch-flyer-keynote-2026-800.webp") type("image/webp"), url("assets/launch-flyer-keynote-2026-800.jpg") type("image/jpeg")); }
+.news-card__media--launch { background-image: url("assets/launch/launch-team-thumb.jpg"); background-image: image-set(url("assets/launch/launch-team-thumb.webp") type("image/webp"), url("assets/launch/launch-team-thumb.jpg") type("image/jpeg")); }
+.news-card__media--flagship { background-image: url("assets/children-community-800.jpg"); background-image: image-set(url("assets/children-community-800.webp") type("image/webp"), url("assets/children-community-800.jpg") type("image/jpeg")); }
+.fi-hub__media--2000 { background-image: url("assets/children-community-800.jpg"); background-image: image-set(url("assets/children-community-800.webp") type("image/webp"), url("assets/children-community-800.jpg") type("image/jpeg")); }
+.fi-hub__media--10000 { background-image: url("assets/child-learning-800.jpg"); background-image: image-set(url("assets/child-learning-800.webp") type("image/webp"), url("assets/child-learning-800.jpg") type("image/jpeg")); }
+.fi-hub__media--scholar { background-image: url("assets/youth-employment-800.jpg"); background-image: image-set(url("assets/youth-employment-800.webp") type("image/webp"), url("assets/youth-employment-800.jpg") type("image/jpeg")); }
+@media (max-width: 760px) {
+  .hero__image { background-image: url("assets/children-community-800.jpg"); background-image: image-set(url("assets/children-community-800.webp") type("image/webp"), url("assets/children-community-800.jpg") type("image/jpeg")); }
+  .about__image { background-image: url("assets/family-support-800.jpg"); background-image: image-set(url("assets/family-support-800.webp") type("image/webp"), url("assets/family-support-800.jpg") type("image/jpeg")); }
+  .page-hero--about .page-hero__image { background-image: url("assets/family-support-800.jpg"); background-image: image-set(url("assets/family-support-800.webp") type("image/webp"), url("assets/family-support-800.jpg") type("image/jpeg")); }
+  .page-hero--programs .page-hero__image { background-image: url("assets/women-tailoring-800.jpg"); background-image: image-set(url("assets/women-tailoring-800.webp") type("image/webp"), url("assets/women-tailoring-800.jpg") type("image/jpeg")); }
+  .page-hero--impact .page-hero__image { background-image: url("assets/community-farmer-800.jpg"); background-image: image-set(url("assets/community-farmer-800.webp") type("image/webp"), url("assets/community-farmer-800.jpg") type("image/jpeg")); }
+  .page-hero--children .page-hero__image { background-image: url("assets/child-learning-800.jpg"); background-image: image-set(url("assets/child-learning-800.webp") type("image/webp"), url("assets/child-learning-800.jpg") type("image/jpeg")); }
+  .page-hero--partners .page-hero__image { background-image: url("assets/youth-employment-800.jpg"); background-image: image-set(url("assets/youth-employment-800.webp") type("image/webp"), url("assets/youth-employment-800.jpg") type("image/jpeg")); }
+  .page-hero--stories .page-hero__image { background-image: url("assets/vocational-tailoring-800.jpg"); background-image: image-set(url("assets/vocational-tailoring-800.webp") type("image/webp"), url("assets/vocational-tailoring-800.jpg") type("image/jpeg")); }
+  .page-hero--contact .page-hero__image { background-image: url("assets/children-community-800.jpg"); background-image: image-set(url("assets/children-community-800.webp") type("image/webp"), url("assets/children-community-800.jpg") type("image/jpeg")); }
+  .page-hero--support .page-hero__image { background-image: url("assets/family-support-800.jpg"); background-image: image-set(url("assets/family-support-800.webp") type("image/webp"), url("assets/family-support-800.jpg") type("image/jpeg")); }
+  .page-hero--profile .page-hero__image { background-image: url("assets/family-support-800.jpg"); background-image: image-set(url("assets/family-support-800.webp") type("image/webp"), url("assets/family-support-800.jpg") type("image/jpeg")); }
+  .page-hero--launch .page-hero__image { background-image: url("assets/launch/launch-team-800.jpg"); background-image: image-set(url("assets/launch/launch-team-800.webp") type("image/webp"), url("assets/launch/launch-team-800.jpg") type("image/jpeg")); }
+}
+
+/* Below-the-fold background photos wait until they are near the screen.
+   The "lazy-bg" class is added by an inline script in <head>; script.js
+   marks each element "is-near" as it approaches. Without JavaScript,
+   nothing is hidden. */
+.lazy-bg .about__image:not(.is-near),
+.lazy-bg .home-news__media:not(.is-near),
+.lazy-bg .news-card__media:not(.is-near),
+.lazy-bg .fi-hub__media:not(.is-near) { background-image: none !important; }
+
+/* Homepage campaign panel: photo under a colour overlay (from improvements.css). */
+.campaign-banner__aside { background-image: linear-gradient(145deg,rgba(20,103,46,.78),rgba(11,31,70,.74)), url("assets/child-learning-800.jpg"); background-image: linear-gradient(145deg,rgba(20,103,46,.78),rgba(11,31,70,.74)), image-set(url("assets/child-learning-800.webp") type("image/webp"), url("assets/child-learning-800.jpg") type("image/jpeg")); }
+.lazy-bg .campaign-banner__aside:not(.is-near) { background-image: linear-gradient(145deg,rgba(20,103,46,.78),rgba(11,31,70,.74)) !important; }

@@ -27,7 +27,11 @@
   <link rel="stylesheet" href="../../footer-credit.css?v=20260923-1">
   <link rel="stylesheet" href="../../partnerships.css?v=20261115-1">
   <link rel="stylesheet" href="../../flagship.css?v=20261114-1">
-  <script defer src="../../script.js?v=20260923-3"></script>
+  <link rel="preload" as="image" type="image/webp" href="../../assets/child-learning-800.webp" media="(max-width: 760px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="../../assets/child-learning.webp" media="(min-width: 761px)" fetchpriority="high">
+  <link rel="stylesheet" href="../../img-opt.css?v=20261116-1">
+  <script>document.documentElement.classList.add('lazy-bg');</script>
+  <script defer src="../../script.js?v=20261116-1"></script>
 </head>
 <body class="inner-page children-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -104,7 +108,7 @@
           <p>Through this initiative, IRF seeks to mobilize resources and establish strategic partnerships with government institutions, private-sector organizations, businesses, churches, philanthropic foundations, development partners, and individuals committed to advancing education and human development.</p>
         </div>
         <figure class="initiative-overview__visual" data-reveal>
-          <img src="../../assets/children-community.jpg" alt="Liberian schoolchildren gathered with an adult in their community" width="1536" height="1085" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../../assets/children-community-800.webp 800w, ../../assets/children-community.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../../assets/children-community-800.jpg 800w, ../../assets/children-community.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../../assets/children-community-800.jpg" alt="Liberian schoolchildren gathered with an adult in their community" width="1536" height="1085" loading="lazy" decoding="async"></picture>
           <figcaption><strong>2,000 Children</strong><span>One Greater Future</span></figcaption>
         </figure>
       </div>
