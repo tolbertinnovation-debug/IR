@@ -25,7 +25,11 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="stylesheet" href="../styles.css?v=20260923-5">
   <link rel="stylesheet" href="../footer-credit.css?v=20260923-1">
-  <script defer src="../script.js?v=20260923-3"></script>
+  <link rel="preload" as="image" type="image/webp" href="../assets/women-tailoring-800.webp" media="(max-width: 760px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="../assets/women-tailoring.webp" media="(min-width: 761px)" fetchpriority="high">
+  <link rel="stylesheet" href="../img-opt.css?v=20261116-1">
+  <script>document.documentElement.classList.add('lazy-bg');</script>
+  <script defer src="../script.js?v=20261116-1"></script>
 </head>
 <body class="inner-page programs-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -110,7 +114,7 @@
     <section class="program-detail program-detail--navy" id="youth" aria-labelledby="youth-title">
       <div class="container program-detail__grid">
         <figure class="program-detail__visual" data-reveal>
-          <img src="../assets/youth-employment.jpg" alt="A young Liberian worker wearing safety gear at a work site" width="1024" height="1536" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../assets/youth-employment-800.webp 800w, ../assets/youth-employment.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../assets/youth-employment-800.jpg 800w, ../assets/youth-employment.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../assets/youth-employment-800.jpg" alt="A young Liberian worker wearing safety gear at a work site" width="1024" height="1536" loading="lazy" decoding="async"></picture>
           <span class="program-detail__number" aria-hidden="true">01 / 05</span>
         </figure>
         <div class="program-detail__copy" data-reveal>
@@ -129,7 +133,7 @@
     <section class="program-detail program-detail--light program-detail--reverse" id="women" aria-labelledby="women-title">
       <div class="container program-detail__grid">
         <figure class="program-detail__visual" data-reveal>
-          <img src="../assets/women-tailoring.jpg" alt="A Liberian woman sewing fabric at a sewing machine" width="1536" height="1024" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../assets/women-tailoring-800.webp 800w, ../assets/women-tailoring.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../assets/women-tailoring-800.jpg 800w, ../assets/women-tailoring.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../assets/women-tailoring-800.jpg" alt="A Liberian woman sewing fabric at a sewing machine" width="1536" height="1024" loading="lazy" decoding="async"></picture>
           <span class="program-detail__number" aria-hidden="true">02 / 05</span>
         </figure>
         <div class="program-detail__copy" data-reveal>
@@ -148,7 +152,7 @@
     <section class="program-detail program-detail--green" id="livelihoods" aria-labelledby="livelihoods-title">
       <div class="container program-detail__grid">
         <figure class="program-detail__visual" data-reveal>
-          <img src="../assets/community-farmer.jpg" alt="A Liberian farmer tending crops in a field" width="1536" height="1024" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../assets/community-farmer-800.webp 800w, ../assets/community-farmer.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../assets/community-farmer-800.jpg 800w, ../assets/community-farmer.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../assets/community-farmer-800.jpg" alt="A Liberian farmer tending crops in a field" width="1536" height="1024" loading="lazy" decoding="async"></picture>
           <span class="program-detail__number" aria-hidden="true">03 / 05</span>
         </figure>
         <div class="program-detail__copy" data-reveal>
@@ -167,7 +171,7 @@
     <section class="program-detail program-detail--light program-detail--reverse" id="recovery" aria-labelledby="recovery-title">
       <div class="container program-detail__grid">
         <figure class="program-detail__visual" data-reveal>
-          <img src="../assets/family-support.jpg" alt="A mother holding her child close" width="1280" height="1536" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../assets/family-support-800.webp 800w, ../assets/family-support.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../assets/family-support-800.jpg 800w, ../assets/family-support.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../assets/family-support-800.jpg" alt="A mother holding her child close" width="1280" height="1536" loading="lazy" decoding="async"></picture>
           <span class="program-detail__number" aria-hidden="true">04 / 05</span>
         </figure>
         <div class="program-detail__copy" data-reveal>
@@ -186,7 +190,7 @@
     <section class="program-detail program-detail--orange" id="families" aria-labelledby="families-title">
       <div class="container program-detail__grid">
         <figure class="program-detail__visual" data-reveal>
-          <img src="../assets/children-community.jpg" alt="Schoolchildren gathered with an adult in a Liberian community" width="1536" height="1085" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="../assets/children-community-800.webp 800w, ../assets/children-community.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw"><img srcset="../assets/children-community-800.jpg 800w, ../assets/children-community.jpg 1536w" sizes="(max-width: 760px) 100vw, 50vw" src="../assets/children-community-800.jpg" alt="Schoolchildren gathered with an adult in a Liberian community" width="1536" height="1085" loading="lazy" decoding="async"></picture>
           <span class="program-detail__number" aria-hidden="true">05 / 05</span>
         </figure>
         <div class="program-detail__copy" data-reveal>

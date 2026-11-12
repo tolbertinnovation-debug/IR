@@ -166,3 +166,23 @@ donationForm?.addEventListener('submit', (event) => {
 
   window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
+// Load below-the-fold background photos only when they come near the screen.
+(() => {
+  const root = document.documentElement;
+  const targets = document.querySelectorAll('.about__image, .home-news__media, .news-card__media, .fi-hub__media, .campaign-banner__aside');
+  if (!root.classList.contains('lazy-bg')) return;
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((el) => el.classList.add('is-near'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-near');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '600px 0px' });
+  targets.forEach((el) => observer.observe(el));
+})();

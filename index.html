@@ -60,7 +60,11 @@
   <link rel="stylesheet" href="improvements.css?v=20260923-2">
   <link rel="stylesheet" href="launch-2026.css?v=20261115-1">
   <link rel="stylesheet" href="gallery.css?v=20261113-1">
-  <script defer src="script.js?v=20260923-3"></script>
+  <link rel="preload" as="image" type="image/webp" href="assets/children-community-800.webp" media="(max-width: 760px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/children-community.webp" media="(min-width: 761px)" fetchpriority="high">
+  <link rel="stylesheet" href="img-opt.css?v=20261116-1">
+  <script>document.documentElement.classList.add('lazy-bg');</script>
+  <script defer src="script.js?v=20261116-1"></script>
 </head>
 <body class="home-v2">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -132,7 +136,7 @@
 
     <section class="launch-teaser" aria-labelledby="launch-teaser-title">
       <div class="container launch-teaser__inner" data-reveal>
-        <a class="launch-teaser__photo" href="launch/" aria-hidden="true" tabindex="-1"><img src="assets/launch/launch-team-thumb.jpg" width="800" height="600" alt="" loading="lazy" decoding="async"></a>
+        <a class="launch-teaser__photo" href="launch/" aria-hidden="true" tabindex="-1"><picture><source type="image/webp" srcset="assets/launch/launch-team-thumb.webp"><img src="assets/launch/launch-team-thumb.jpg" width="800" height="600" alt="" loading="lazy" decoding="async"></picture></a>
         <div class="launch-teaser__copy">
           <p class="eyebrow"><span></span> Official Launch · November 7, 2026</p>
           <h2 id="launch-teaser-title">Thank you for standing with us at our historic launch.</h2>
