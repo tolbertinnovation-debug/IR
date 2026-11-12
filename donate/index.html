@@ -23,14 +23,14 @@
   <title>Donate | ImpactReach Foundation</title>
   <link rel="icon" href="../assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../styles.css?v=20260923-3">
+  <link rel="stylesheet" href="../styles.css?v=20261117-1">
   <link rel="stylesheet" href="../footer-credit.css?v=20260923-1">
   <link rel="stylesheet" href="../donation-transfer.css?v=20261009-1">
   <link rel="preload" as="image" type="image/webp" href="../assets/family-support-800.webp" media="(max-width: 760px)" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" href="../assets/family-support.webp" media="(min-width: 761px)" fetchpriority="high">
   <link rel="stylesheet" href="../img-opt.css?v=20261116-1">
   <script>document.documentElement.classList.add('lazy-bg');</script>
-  <script defer src="../script.js?v=20261116-1"></script>
+  <script defer src="../script.js?v=20261117-1"></script>
   <script defer src="../donation-transfer.js?v=20261009-1"></script>
 </head>
 <body class="inner-page donate-page">
@@ -226,10 +226,13 @@
         <div class="support-interest__intro" data-reveal>
           <p class="eyebrow"><span></span> Donation inquiry</p>
           <h2 id="donation-interest-title">Begin with a secure, direct conversation.</h2>
-          <p>Complete this form to prepare an email in your own email application. Review it before sending. This website does not collect payment information or store your form details.</p>
+          <p>Complete this form and your inquiry is sent directly to the foundation’s email. This website does not collect payment information or store your form details.</p>
           <div class="support-interest__email"><small>Official contact</small><a href="mailto:impactreachfoundation@gmail.com">impactreachfoundation@gmail.com</a></div>
         </div>
-        <form class="support-form" action="mailto:impactreachfoundation@gmail.com" method="post" enctype="text/plain" data-donation-form data-reveal>
+        <form class="support-form" action="https://formsubmit.co/impactreachfoundation@gmail.com" method="post" data-donation-form data-reveal>
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New donation inquiry from the IRF website">
+          <div class="form-honey" aria-hidden="true"><label for="donation-honey">Leave this field empty</label><input id="donation-honey" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
           <div class="form-row">
             <div class="form-field"><label for="donation-name">Full name <span aria-hidden="true">*</span></label><input id="donation-name" name="name" type="text" autocomplete="name" required></div>
             <div class="form-field"><label for="donation-email">Email address <span aria-hidden="true">*</span></label><input id="donation-email" name="email" type="email" autocomplete="email" required></div>
@@ -240,7 +243,7 @@
             <div class="form-field"><label for="donation-program">Program interest <span>(optional)</span></label><select id="donation-program" name="program"><option value="">No specific program</option><option>Youth Skills &amp; Employment</option><option>Women &amp; Widow Empowerment</option><option>Poverty Reduction &amp; Livelihoods</option><option>Drug Prevention &amp; Rehabilitation Support</option><option>Family Strengthening &amp; Child Support</option><option>2,000 Children initiative</option></select></div>
           </div>
           <div class="form-field"><label for="donation-message">Message <span aria-hidden="true">*</span></label><textarea id="donation-message" name="message" rows="7" placeholder="Tell IRF what you are interested in supporting. Do not include card, bank, or mobile-money account details." required></textarea></div>
-          <button class="button button--orange" type="submit">Prepare donation email <span aria-hidden="true">→</span></button>
+          <button class="button button--orange" type="submit">Send donation inquiry <span aria-hidden="true">→</span></button>
           <p class="form-status" role="status" aria-live="polite" data-donation-status></p>
         </form>
       </div>

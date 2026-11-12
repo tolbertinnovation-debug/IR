@@ -1655,3 +1655,10 @@ main > section {
   .profile-doc__cards { grid-template-columns: 1fr; }
   .profile-doc__actions, .profile-doc__actions .button { width: 100%; }
 }
+
+/* Website form delivery */
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status[data-state="success"] { padding: 12px 14px; color: #14532d; background: #e7f6ea; border-radius: 10px; font-weight: 700; }
+.form-status[data-state="error"] { padding: 12px 14px; color: #7a2a1f; background: #fdecea; border-radius: 10px; }
+.form-status[data-state="error"] a { color: inherit; font-weight: 800; text-decoration: underline; }
+.contact-form, .support-form { position: relative; }
