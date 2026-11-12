@@ -23,13 +23,13 @@
   <title>Support Us | ImpactReach Foundation</title>
   <link rel="icon" href="../assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../styles.css?v=20260923-3">
+  <link rel="stylesheet" href="../styles.css?v=20261117-1">
   <link rel="stylesheet" href="../footer-credit.css?v=20260923-1">
   <link rel="preload" as="image" type="image/webp" href="../assets/family-support-800.webp" media="(max-width: 760px)" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" href="../assets/family-support.webp" media="(min-width: 761px)" fetchpriority="high">
   <link rel="stylesheet" href="../img-opt.css?v=20261116-1">
   <script>document.documentElement.classList.add('lazy-bg');</script>
-  <script defer src="../script.js?v=20261116-1"></script>
+  <script defer src="../script.js?v=20261117-1"></script>
 </head>
 <body class="inner-page support-page">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -143,10 +143,13 @@
         <div class="support-interest__intro" data-reveal>
           <p class="eyebrow"><span></span> Share your interest</p>
           <h2 id="support-interest-title">Begin with a clear introduction.</h2>
-          <p>Tell IRF how you would like to help. The form prepares an email in your device’s email application for you to review and send.</p>
+          <p>Tell IRF how you would like to help. Your message is sent directly to the foundation’s email.</p>
           <div class="support-interest__email"><small>Official contact</small><a href="mailto:impactreachfoundation@gmail.com">impactreachfoundation@gmail.com</a></div>
         </div>
-        <form class="support-form" action="mailto:impactreachfoundation@gmail.com" method="post" enctype="text/plain" data-support-form data-reveal>
+        <form class="support-form" action="https://formsubmit.co/impactreachfoundation@gmail.com" method="post" data-support-form data-reveal>
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New support interest from the IRF website">
+          <div class="form-honey" aria-hidden="true"><label for="support-honey">Leave this field empty</label><input id="support-honey" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
           <div class="form-row">
             <div class="form-field"><label for="support-name">Full name <span aria-hidden="true">*</span></label><input id="support-name" name="name" type="text" autocomplete="name" required></div>
             <div class="form-field"><label for="support-email">Email address <span aria-hidden="true">*</span></label><input id="support-email" name="email" type="email" autocomplete="email" required></div>
@@ -157,7 +160,7 @@
             <div class="form-field"><label for="support-program">Program interest <span>(optional)</span></label><select id="support-program" name="program"><option value="">No specific program</option><option>Youth Skills &amp; Employment</option><option>Women &amp; Widow Empowerment</option><option>Poverty Reduction &amp; Livelihoods</option><option>Drug Prevention &amp; Rehabilitation Support</option><option>Family Strengthening &amp; Child Support</option><option>2,000 Children initiative</option></select></div>
           </div>
           <div class="form-field"><label for="support-message">Tell us about your interest <span aria-hidden="true">*</span></label><textarea id="support-message" name="message" rows="7" required></textarea></div>
-          <button class="button button--orange" type="submit">Prepare support email <span aria-hidden="true">→</span></button>
+          <button class="button button--orange" type="submit">Send message <span aria-hidden="true">→</span></button>
           <p class="form-status" role="status" aria-live="polite" data-support-status></p>
         </form>
       </div>

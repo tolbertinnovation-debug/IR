@@ -88,83 +88,70 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-const contactForm = document.querySelector('[data-contact-form]');
-const formStatus = document.querySelector('[data-form-status]');
+// Website forms: send each submission directly to the foundation's inbox
+// (impactreachfoundation@gmail.com) through FormSubmit. If the service cannot
+// be reached, offer the visitor a prepared email as a fallback.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/impactreachfoundation@gmail.com';
+const FORM_EMAIL = 'impactreachfoundation@gmail.com';
 
-contactForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
+const websiteForms = [
+  { selector: '[data-contact-form]', status: '[data-form-status]', subject: (d) => `IRF website inquiry: ${d.get('reason') || 'General inquiry'}`,
+    fields: [['Name', 'name'], ['Email', 'email'], ['Organization', 'organization'], ['Reason', 'reason'], ['Message', 'message']] },
+  { selector: '[data-support-form]', status: '[data-support-status]', subject: (d) => `IRF support interest: ${d.get('support-type') || 'Support inquiry'}`,
+    fields: [['Name', 'name'], ['Email', 'email'], ['Organization', 'organization'], ['Support interest', 'support-type'], ['Program interest', 'program'], ['Message', 'message']] },
+  { selector: '[data-donation-form]', status: '[data-donation-status]', subject: (d) => `IRF donation inquiry: ${d.get('donation-type') || 'Donation inquiry'}`,
+    fields: [['Name', 'name'], ['Email', 'email'], ['Organization', 'organization'], ['Donation interest', 'donation-type'], ['Program interest', 'program'], ['Message', 'message']] }
+];
 
-  const formData = new FormData(contactForm);
-  const reason = String(formData.get('reason') || 'General inquiry');
-  const subject = `IRF website inquiry: ${reason}`;
-  const body = [
-    `Name: ${formData.get('name') || ''}`,
-    `Email: ${formData.get('email') || ''}`,
-    `Organization: ${formData.get('organization') || 'Not provided'}`,
-    `Reason: ${reason}`,
-    '',
-    String(formData.get('message') || '')
-  ].join('\n');
+websiteForms.forEach(({ selector, status, subject, fields }) => {
+  const form = document.querySelector(selector);
+  if (!form) return;
+  const statusEl = form.querySelector(status) || document.querySelector(status);
+  const button = form.querySelector('button[type="submit"]');
 
-  if (formStatus) {
-    formStatus.textContent = 'Your email application should open with this message prepared. Review it, then press send.';
-  }
+  const setStatus = (message, state) => {
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    statusEl.dataset.state = state;
+  };
 
-  window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    if (String(data.get('_honey') || '')) return; // spam bot filled the hidden field
 
-const supportForm = document.querySelector('[data-support-form]');
-const supportStatus = document.querySelector('[data-support-status]');
+    const payload = { _subject: subject(data), _template: 'table', _replyto: String(data.get('email') || ''), _captcha: 'false' };
+    fields.forEach(([label, name]) => { payload[label] = String(data.get(name) || '').trim() || 'Not provided'; });
 
-supportForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
+    const originalLabel = button ? button.innerHTML : '';
+    if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+    setStatus('Sending your message…', 'pending');
 
-  const formData = new FormData(supportForm);
-  const supportType = String(formData.get('support-type') || 'Support inquiry');
-  const program = String(formData.get('program') || 'No specific program');
-  const subject = `IRF support interest: ${supportType}`;
-  const body = [
-    `Name: ${formData.get('name') || ''}`,
-    `Email: ${formData.get('email') || ''}`,
-    `Organization: ${formData.get('organization') || 'Not provided'}`,
-    `Support interest: ${supportType}`,
-    `Program interest: ${program}`,
-    '',
-    String(formData.get('message') || '')
-  ].join('\n');
-
-  if (supportStatus) {
-    supportStatus.textContent = 'Your email application should open with this message prepared. Review it, then press send.';
-  }
-
-  window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-
-const donationForm = document.querySelector('[data-donation-form]');
-const donationStatus = document.querySelector('[data-donation-status]');
-
-donationForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(donationForm);
-  const donationType = String(formData.get('donation-type') || 'Donation inquiry');
-  const program = String(formData.get('program') || 'No specific program');
-  const subject = `IRF donation inquiry: ${donationType}`;
-  const body = [
-    `Name: ${formData.get('name') || ''}`,
-    `Email: ${formData.get('email') || ''}`,
-    `Organization: ${formData.get('organization') || 'Not provided'}`,
-    `Donation interest: ${donationType}`,
-    `Program interest: ${program}`,
-    '',
-    String(formData.get('message') || '')
-  ].join('\n');
-
-  if (donationStatus) {
-    donationStatus.textContent = 'Your email application should open with this donation inquiry prepared. Review it, then press send.';
-  }
-
-  window.location.href = `mailto:impactreachfoundation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || String(result.success) !== 'true') throw new Error(result.message || 'Send failed');
+      form.reset();
+      setStatus('Thank you. Your message has been sent to ImpactReach Foundation. We will reply by email.', 'success');
+    } catch (error) {
+      const body = fields.map(([label, name]) => `${label}: ${data.get(name) || 'Not provided'}`).join('\n');
+      const mailto = `mailto:${FORM_EMAIL}?subject=${encodeURIComponent(payload._subject)}&body=${encodeURIComponent(body)}`;
+      setStatus('', 'error');
+      if (statusEl) {
+        statusEl.append('We could not send your message right now. ');
+        const link = document.createElement('a');
+        link.href = mailto;
+        link.textContent = 'Send it by email instead';
+        statusEl.append(link, ` or write to ${FORM_EMAIL}.`);
+      }
+    } finally {
+      if (button) { button.disabled = false; button.innerHTML = originalLabel; }
+    }
+  });
 });
 
 // Load below-the-fold background photos only when they come near the screen.
