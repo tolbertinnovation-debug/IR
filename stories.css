@@ -2,7 +2,7 @@
 .news-card__media { text-decoration: none; }
 .news-card__media--appreciation { background: url("assets/launch-flyer-keynote-2026.jpg") left 20%/cover no-repeat; }
 .news-card__media--launch { background: url("assets/launch-flyer-2026.jpg") center 30%/cover no-repeat; }
-.news-card__media--flagship { background: url("assets/children-community.png") center/cover no-repeat; }
+.news-card__media--flagship { background: url("assets/children-community.jpg") center/cover no-repeat; }
 .news-card__body h3 a { color: inherit; text-decoration: none; }
 .news-card__body h3 a:hover { color: var(--green-700); }
 .news-card__link { align-self: flex-start; margin-top: auto; color: var(--green-700); font-weight: 800; font-size: .9rem; }
